@@ -2,165 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arun — AI Innovator · Creator of Aura & TrueMate</title>
-  <meta name="description" content="Arun — Built Aura language, TrueMate AI and platform systems that modernize education, automation and labor marketplaces. Explore projects, demos and contact." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arun — Builder of Languages, AI & Real Systems</title>
+  <meta name="description" content="Arun — maker of programming language prototypes, human-like assistants and pragmatic automation. Portfolio and demos." />
+  <meta name="author" content="Arun" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Arun — AI Innovator & Creator of Aura" />
-  <meta property="og:description" content="By age 20 Arun shipped language tooling, deployable AI systems and platforms that solve real problems. Explore projects & demos." />
+  <meta property="og:title" content="Arun — Builder of Languages, AI & Real Systems" />
+  <meta property="og:description" content="Maker of programming language prototypes, human-like assistants and pragmatic automation. Portfolio + demos." />
   <meta property="og:type" content="website" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Arun — AI Innovator & Creator of Aura" />
 
-  <!-- Schema.org JSON-LD (Person + sameAs) -->
+  <!-- Structured data: Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Arun",
-    "url": "https://arunboth.github.io",
-    "jobTitle": "AI Developer & Systems Innovator",
+    "url": "https://Arun-developer123.github.io",
     "sameAs": [
-      "https://github.com/arunboth",
-      "https://linkedin.com/in/arunboth"
+      "https://github.com/Arun-developer123"
     ],
-    "description": "Builder of Aura language, TrueMate AI and multiple platforms that automate and humanize systems. Focus: practical AI, automation, and developer-first tools."
+    "jobTitle": "Maker • AI & Language Systems",
+    "description": "Builder of readable programming language prototypes, proactive conversational AI, and pragmatic automation & platform systems."
   }
   </script>
 
-  <!-- Fonts + Tailwind -->
+  <!-- Fonts + Tailwind (CDN quick setup) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root{--bg:#060817;--card:#0b1220;--accent:#00E0B8;--muted:rgba(255,255,255,.65)}
-    html,body{height:100%}
-    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:radial-gradient(1200px 600px at 10% 10%, rgba(14,165,164,0.06), transparent 8%), radial-gradient(1000px 500px at 90% 90%, rgba(79,70,229,0.05), transparent 6%), var(--bg); color: #e6eef6;}
+    :root {
+      --bg: #040612;
+      --card: rgba(255,255,255,0.03);
+      --glass-border: rgba(255,255,255,0.04);
+      --accent-a: #7C6CFF;
+      --accent-b: #00E0B8;
+    }
+    html,body { height:100%; }
+    body {
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(900px 500px at 10% 20%, rgba(124,108,255,0.06), transparent 10%),
+                  radial-gradient(700px 400px at 90% 80%, rgba(0,224,184,0.04), transparent 8%),
+                  var(--bg);
+      color: #e9f0ff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      overflow-y:scroll;
+      -webkit-overflow-scrolling: touch;
+    }
 
-    /* Hero visuals */
-    .hero-blob{filter:drop-shadow(0 30px 60px rgba(2,6,23,0.6));}
+    /* Glass card */
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(8px);
+    }
 
-    /* cards */
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04); backdrop-filter: blur(10px);}
-    .card:hover{transform:translateY(-10px) scale(1.01); transition: all .45s cubic-bezier(.2,.9,.3,1); box-shadow: 0 24px 60px rgba(2,6,23,0.6)}
-
-    /* subtle entrance */
-    .reveal{opacity:0; transform:translateY(18px) scale(.995); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.9,.3,1);}
-    .reveal.visible{opacity:1; transform:none}
-
-    /* animated underline */
-    .underline-anim{position:relative}
-    .underline-anim::after{content:''; position:absolute; left:0; bottom:-6px; width:0; height:4px; border-radius:999px; background:linear-gradient(90deg,var(--accent), #7C6CFF); transition:width .5s ease}
-    .underline-anim:hover::after{width:100%}
+    /* Cinematic hero text */
+    .big-title {
+      font-weight:800;
+      line-height:1.02;
+      letter-spacing:-0.01em;
+    }
 
     /* gradient text */
-    .gradient-text{background:linear-gradient(90deg,#7c6cff,#00e0b8); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .gtext { 
+      background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
 
-    /* small screens fixes */
-    @media (max-width:640px){ .desktop-only{display:none} }
+    /* subtle card hover */
+    .project:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(2,6,23,0.6); transition: all .45s cubic-bezier(.2,.9,.3,1); }
+
+    /* reveal animations */
+    .reveal { opacity:0; transform: translateY(18px) scale(.995); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.9,.3,1); }
+    .reveal.visible { opacity:1; transform: none; }
+
+    /* animated underline on hover */
+    .underline-anim { position:relative; display:inline-block; }
+    .underline-anim::after { content:''; position:absolute; left:0; bottom:-6px; width:0; height:4px; border-radius:999px; background: linear-gradient(90deg,var(--accent-b), var(--accent-a)); transition: width .45s ease; }
+    .underline-anim:hover::after { width:100%; }
+
+    /* hero particle dots */
+    .particle { fill: rgba(255,255,255,0.06); }
+
+    /* footer tiny */
+    footer { color: rgba(233,240,255,0.55); }
+
+    @media (max-width:640px) {
+      .desktop-only { display:none; }
+      .big-title { font-size: 2rem; }
+    }
+    @media (min-width:641px) {
+      .big-title { font-size: clamp(38px, 6vw, 64px); }
+    }
   </style>
 </head>
 <body>
   <!-- NAV -->
-  <header class="w-full fixed top-4 left-0 z-50">
+  <header class="fixed w-full z-40 top-4">
     <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#1e293b] to-[#0ea5a4] flex items-center justify-center text-white font-extrabold shadow-md">AB</div>
-        <div class="text-sm text-slate-200">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#151a2b] to-[#0ea5a4] flex items-center justify-center text-white font-extrabold shadow">A</div>
+        <div class="text-sm">
           <div class="font-semibold">Arun</div>
-          <div class="text-xs opacity-70">AI · Languages · Automation</div>
+          <div class="text-xs opacity-70">Maker · AI · Languages</div>
         </div>
       </a>
+
       <nav class="flex items-center gap-3">
-        <a href="#projects" class="text-sm px-4 py-2 rounded-md hover:bg-white/5">Projects</a>
-        <a href="#about" class="text-sm px-4 py-2 rounded-md hover:bg-white/5">About</a>
-        <a href="#contact" class="text-sm px-4 py-2 rounded-md bg-gradient-to-tr from-[#00E0B8] to-[#7C6CFF] text-slate-900 font-semibold">Contact</a>
+        <a href="#projects" class="text-sm px-3 py-2 rounded hover:bg-white/5">Projects</a>
+        <a href="#about" class="text-sm px-3 py-2 rounded hover:bg-white/5">About</a>
+        <a href="https://github.com/Arun-developer123" target="_blank" class="text-sm px-3 py-2 rounded bg-gradient-to-tr from-var(--accent-b) to-var(--accent-a) text-slate-900 font-semibold">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="pt-28 pb-16">
+  <!-- HERO / Cinematic launch -->
+  <section class="pt-28 pb-12">
     <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">I build & ship the future — <span class="gradient-text">from language runtimes to human-like AI</span></h1>
-        <p class="mt-5 text-lg opacity-80">By 20 I shipped systems that reimagine how people interact with software. I design languages, runtime tooling, and AI that *does work* — not just research. My work powers education, automations, and real-world platforms that scale.</p>
+      <div class="reveal" id="hero-left">
+        <h1 class="big-title">
+          I build tools that <span class="gtext">actually work</span><br class="desktop-only" />
+          — languages, AI & real systems.
+        </h1>
+
+        <p class="mt-6 text-lg opacity-80 max-w-xl">
+          I'm <strong>Arun</strong> — I turn bold ideas into working prototypes and production experiences: readable languages, proactive assistants, and automation pipelines that remove friction from the real world.
+        </p>
 
         <div class="mt-6 flex gap-3">
-          <a href="#projects" class="px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold shadow-md">Explore Projects</a>
-          <a href="#contact" class="px-6 py-3 rounded-lg border border-white/10">Work with me</a>
+          <a href="#projects" class="px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold shadow">Explore Work</a>
+          <a href="https://github.com/Arun-developer123" target="_blank" class="px-6 py-3 rounded-lg border border-white/10">View GitHub</a>
         </div>
 
-        <div class="mt-8 flex gap-4 items-center text-sm opacity-80">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-[#0ea5a4]/10 flex items-center justify-center">🏆</div>
-            <div>
-              <div class="font-semibold">19 — 20</div>
-              <div class="text-xs">Ambitious years — shipped language & multiple AI systems</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-[#7c6cff]/10 flex items-center justify-center">⚡</div>
-            <div>
-              <div class="font-semibold">Fast Prototyper</div>
-              <div class="text-xs">From idea to demo in days</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 text-sm opacity-70">
-          <span class="font-medium">Practical highlights:</span> Aura (programming language), TrueMate AI (human-like assistant), Gurugram University portal (education records automation), targeted automation pipelines.
+        <div class="mt-6 text-sm opacity-70">
+          <strong>Quick facts:</strong> language design • runtime & tooling • conversational AI • real-world automation.
         </div>
       </div>
 
-      <div class="relative">
-        <!-- Animated hero illustration (SVG) -->
-        <div class="hero-blob w-full rounded-3xl card p-6">
-          <svg viewBox="0 0 600 360" class="w-full h-64 md:h-80">
+      <div class="reveal" id="hero-right">
+        <!-- cinematic visual: SVG + floating card -->
+        <div class="glass rounded-3xl p-6 relative overflow-hidden">
+          <!-- SVG particles / soft shapes -->
+          <svg viewBox="0 0 600 360" class="w-full h-64 mb-4" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <defs>
-              <linearGradient id="g1" x1="0" x2="1">
+              <linearGradient id="lg1" x1="0" x2="1">
                 <stop offset="0" stop-color="#7C6CFF"/>
                 <stop offset="1" stop-color="#00E0B8"/>
               </linearGradient>
             </defs>
-            <rect rx="18" width="100%" height="100%" fill="url(#g1)" opacity="0.06" />
+            <rect width="100%" height="100%" rx="14" fill="rgba(7,10,20,0.6)"/>
             <g transform="translate(20,20)">
-              <rect x="0" y="0" width="240" height="120" rx="12" fill="#0b1220" stroke="rgba(255,255,255,0.03)" />
-              <text x="22" y="34" fill="#e6eef6" font-size="18" font-weight="600">Aura Playground — live REPL</text>
-              <rect x="18" y="50" width="200" height="6" rx="3" fill="#0ea5a4" opacity="0.15" />
-              <rect x="18" y="64" width="160" height="6" rx="3" fill="#7c6cff" opacity="0.12" />
-
-              <circle cx="420" cy="60" r="48" fill="#071022" stroke="rgba(255,255,255,0.03)" />
-              <text x="372" y="64" fill="#e6eef6" font-size="14">TrueMate</text>
-              <text x="372" y="82" fill="#a7b4c7" font-size="12">Human-like assistant</text>
+              <rect x="0" y="0" rx="10" width="230" height="110" fill="rgba(255,255,255,0.02)"/>
+              <text x="18" y="32" fill="#e9f0ff" font-size="16" font-weight="700">Aura Playground — live REPL</text>
+              <rect x="18" y="52" width="200" height="8" rx="4" fill="#0ea5a4" opacity="0.12"/>
+              <rect x="18" y="72" width="150" height="8" rx="4" fill="#7c6cff" opacity="0.10"/>
+              <circle cx="420" cy="60" r="48" class="particle"/>
+              <text x="372" y="64" fill="#e9f0ff" font-size="13">TrueMate</text>
+              <text x="372" y="82" fill="#b8c6dd" font-size="11">Human-like assistant</text>
             </g>
           </svg>
 
-          <div class="mt-4 grid grid-cols-3 gap-3">
-            <div class="p-3 card rounded-lg text-center">
+          <div class="grid grid-cols-3 gap-3">
+            <div class="p-3 glass rounded-lg text-center">
               <div class="font-semibold">Aura</div>
               <div class="text-xs opacity-70 mt-1">Readable language • Fast prototyping</div>
             </div>
-            <div class="p-3 card rounded-lg text-center">
+            <div class="p-3 glass rounded-lg text-center">
               <div class="font-semibold">Automation</div>
-              <div class="text-xs opacity-70 mt-1">Targeted pipelines • Gmail flows</div>
+              <div class="text-xs opacity-70 mt-1">Targeted pipelines • Audits</div>
             </div>
-            <div class="p-3 card rounded-lg text-center">
+            <div class="p-3 glass rounded-lg text-center">
               <div class="font-semibold">Platforms</div>
               <div class="text-xs opacity-70 mt-1">Education & Labour</div>
             </div>
           </div>
-        </div>
 
-        <!-- floating badges -->
-        <div class="absolute -right-6 -bottom-6 text-xs opacity-90">
-          <div class="card p-3 rounded-lg">Early prototype demos — available on GitHub</div>
+          <div class="absolute -right-8 -bottom-6 text-xs">
+            <div class="glass p-2 rounded-lg">Demos on GitHub</div>
+          </div>
         </div>
       </div>
     </div>
@@ -169,141 +197,110 @@
   <!-- PROJECTS -->
   <section id="projects" class="pb-12">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-extrabold underline-anim">Selected Work</h2>
-      <p class="mt-3 text-sm opacity-80">A selection of end-to-end systems I designed and shipped. Each item is a product, not just code.</p>
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-3xl font-extrabold underline-anim">Selected Work</h2>
+          <p class="mt-2 text-sm opacity-80">End-to-end systems I designed and shipped — product-oriented, pragmatic, and user-centred.</p>
+        </div>
+        <div class="text-sm opacity-70">View more on <a href="https://github.com/Arun-developer123" class="underline-anim">GitHub</a></div>
+      </div>
 
       <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Card: Gurugram University -->
-        <article class="card p-6 rounded-2xl reveal">
+        <!-- Card 1 -->
+        <article class="project glass p-6 rounded-2xl reveal">
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-lg bg-[#0ea5a4]/10 flex items-center justify-center">GU</div>
             <div>
-              <h3 class="font-semibold">Gurugram University — Academic Record Portal</h3>
-              <p class="mt-2 text-xs opacity-75">Secure student record edits with moderator workflow, immutable audit logs, and a paperless intake that cut manual effort by ~90% during pilot runs.</p>
+              <h3 class="font-semibold">Education Records Portal</h3>
+              <p class="mt-2 text-xs opacity-75">Paperless intake and secure moderation flows that drastically reduce manual admin overhead for student record edits.</p>
               <div class="mt-3 flex gap-2">
-                <a class="text-xs px-3 py-1 rounded-full bg-white/5">React</a>
-                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Supabase</a>
+                <span class="text-xs px-3 py-1 rounded-full bg-white/5">React</span>
+                <span class="text-xs px-3 py-1 rounded-full bg-white/5">Supabase</span>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- Card: Aura -->
-        <article class="card p-6 rounded-2xl reveal">
+        <!-- Card 2 -->
+        <article class="project glass p-6 rounded-2xl reveal">
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-lg bg-[#7c6cff]/10 flex items-center justify-center">A</div>
             <div>
               <h3 class="font-semibold">Aura — Programming Language</h3>
-              <p class="mt-2 text-xs opacity-75">An English-first language designed for readability. Built lexer, parser, and a compact VM to demonstrate language ergonomics and teaching-first syntax.</p>
+              <p class="mt-2 text-xs opacity-75">An English-first language prototype focused on clarity and rapid learning; includes lexer, parser and a demonstration VM.</p>
               <div class="mt-3 flex gap-2">
-                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Lexer</a>
-                <a class="text-xs px-3 py-1 rounded-full bg-white/5">VM</a>
+                <span class="text-xs px-3 py-1 rounded-full bg-white/5">Language</span>
+                <span class="text-xs px-3 py-1 rounded-full bg-white/5">VM</span>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- Card: Playground -->
-        <article class="card p-6 rounded-2xl reveal">
+        <!-- Card 3 -->
+        <article class="project glass p-6 rounded-2xl reveal">
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-lg bg-[#ffd166]/10 flex items-center justify-center">P</div>
             <div>
               <h3 class="font-semibold">Aura Playground</h3>
-              <p class="mt-2 text-xs opacity-75">Live REPL with instant sharing and collaborative demos. Built to teach and prototype language ideas within minutes.</p>
+              <p class="mt-2 text-xs opacity-75">Live REPL for rapid prototyping with instant share links and collaborative demos.</p>
               <div class="mt-3 flex gap-2">
-                <a class="text-xs px-3 py-1 rounded-full bg-white/5">WebAssembly</a>
-                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Editor</a>
+                <span class="text-xs px-3 py-1 rounded-full bg-white/5">REPL</span>
+                <span class="text-xs px-3 py-1 rounded-full bg-white/5">WebAssembly</span>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- Card: Aura AI -->
-        <article class="card p-6 rounded-2xl reveal">
+        <!-- Card 4 -->
+        <article class="project glass p-6 rounded-2xl reveal">
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-lg bg-[#00e0b8]/10 flex items-center justify-center">AI</div>
             <div>
-              <h3 class="font-semibold">Aura AI — Targeted Automation Engine</h3>
-              <p class="mt-2 text-xs opacity-75">Automation pipelines that locate files, execute operations, and trigger outreach. Built with safety checks and an immutable log for auditability.</p>
-              <div class="mt-3 flex gap-2">
-                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Python</a>
-                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Node</a>
-              </div>
+              <h3 class="font-semibold">TrueMate — Proactive Assistant</h3>
+              <p class="mt-2 text-xs opacity-75">A privacy-minded conversational agent designed to be helpful, proactive and human-like in daily interactions.</p>
             </div>
           </div>
         </article>
 
-        <!-- Card: CSC -->
-        <article class="card p-6 rounded-2xl reveal">
+        <!-- Card 5 -->
+        <article class="project glass p-6 rounded-2xl reveal">
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-lg bg-[#7c6cff]/10 flex items-center justify-center">CSC</div>
             <div>
-              <h3 class="font-semibold">CSC Centre — Community Service Portal</h3>
-              <p class="mt-2 text-xs opacity-75">Accessible forms and low-bandwidth flows for citizens to request government and CSC services online.</p>
+              <h3 class="font-semibold">Community Service Portal</h3>
+              <p class="mt-2 text-xs opacity-75">Accessibility-first flows for citizens to request local services using low-bandwidth patterns.</p>
             </div>
           </div>
         </article>
 
-        <!-- Card: E‑Commerce -->
-        <article class="card p-6 rounded-2xl reveal">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-[#ffd166]/10 flex items-center justify-center">EC</div>
-            <div>
-              <h3 class="font-semibold">Clothing E‑Commerce</h3>
-              <p class="mt-2 text-xs opacity-75">Full-stack marketplace with merchant onboarding, dashboarding and optimized media pipelines.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card: TrueMate -->
-        <article class="card p-6 rounded-2xl reveal">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-[#00e0b8]/10 flex items-center justify-center">TM</div>
-            <div>
-              <h3 class="font-semibold">TrueMate — Human-like Chat</h3>
-              <p class="mt-2 text-xs opacity-75">A proactive conversational agent focusing on emotional intelligence, privacy-first design and helpful autonomy.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card: Labour Chowk -->
-        <article class="card p-6 rounded-2xl reveal">
+        <!-- Card 6 -->
+        <article class="project glass p-6 rounded-2xl reveal">
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 rounded-lg bg-[#1e293b]/10 flex items-center justify-center">LC</div>
             <div>
               <h3 class="font-semibold">Labour Chowk — Worker App</h3>
-              <p class="mt-2 text-xs opacity-75">Digitizing local labour marketplaces with offline-first patterns, discovery and worker-first UX.</p>
+              <p class="mt-2 text-xs opacity-75">Digitizing day-labor marketplaces with discovery, offline support and worker-first UX patterns.</p>
             </div>
           </div>
         </article>
       </div>
 
-      <div class="mt-8 flex gap-3">
-        <a href="https://github.com/arunboth" target="_blank" class="px-4 py-2 rounded-md bg-white/5">View GitHub</a>
-        <a href="#contact" class="px-4 py-2 rounded-md bg-gradient-to-tr from-[#00E0B8] to-[#7C6CFF] text-slate-900 font-semibold">Let's Talk</a>
+      <div class="mt-8">
+        <a href="https://github.com/Arun-developer123" target="_blank" class="px-4 py-2 rounded bg-white/5">See code & demos on GitHub</a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="py-12 border-t border-white/4">
+  <section id="about" class="py-12 border-t border-white/6">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-2xl font-extrabold">About Arun</h2>
-      <p class="mt-4 opacity-80">I'm a product-minded engineer who iterates quickly and ships systems that people actually use. I combine low-level systems work (language runtimes, parsers) with product thinking and practical automation. My focus is impact: building tools that reduce human friction and unlock productivity.</p>
+      <p class="mt-4 opacity-80">I combine low-level systems work (language runtimes, parsers) with product-first thinking and practical automation. My aim: build tools that reduce human friction and scale to real users.</p>
 
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div class="card p-6 rounded-lg reveal">
-          <div class="font-semibold">Engineer</div>
-          <div class="mt-2 text-xs opacity-70">Runtime engines, integrations, web infrastructure.</div>
-        </div>
-        <div class="card p-6 rounded-lg reveal">
-          <div class="font-semibold">Product</div>
-          <div class="mt-2 text-xs opacity-70">Clear flows, measurable outcomes, simple UX.</div>
-        </div>
-        <div class="card p-6 rounded-lg reveal">
-          <div class="font-semibold">Impact</div>
-          <div class="mt-2 text-xs opacity-70">Education, automation, and community-first platforms.</div>
-        </div>
+        <div class="glass p-6 rounded-lg reveal"><div class="font-semibold">Engineer</div><div class="mt-2 text-xs opacity-70">Runtimes, parsers, infrastructure.</div></div>
+        <div class="glass p-6 rounded-lg reveal"><div class="font-semibold">Product</div><div class="mt-2 text-xs opacity-70">Clear UX, reliable flows, measurable outcomes.</div></div>
+        <div class="glass p-6 rounded-lg reveal"><div class="font-semibold">Impact</div><div class="mt-2 text-xs opacity-70">Education, automation, community tools.</div></div>
       </div>
     </div>
   </section>
@@ -311,46 +308,65 @@
   <!-- CONTACT -->
   <section id="contact" class="py-12">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-2xl font-extrabold">Work with me</h2>
-      <p class="mt-3 opacity-80">Looking for collaboration, mentorship, or speaking opportunities. I respond quickly to thoughtful messages — include a one-line brief.</p>
+      <h2 class="text-2xl font-extrabold">Contact</h2>
+      <p class="mt-3 opacity-80">For collaboration, demos or to see code, open an issue or message me on GitHub. Include a one-line brief and I'll reply.</p>
 
       <div class="mt-6 flex justify-center gap-4">
-        <a href="mailto:contact@arunboth.com" class="px-6 py-3 rounded-lg bg-gradient-to-tr from-[#00E0B8] to-[#7C6CFF] text-slate-900 font-semibold">contact@arunboth.com</a>
-        <a href="https://github.com/arunboth" target="_blank" class="px-6 py-3 rounded-lg border border-white/8">GitHub</a>
+        <a href="https://github.com/Arun-developer123" target="_blank" class="px-6 py-3 rounded-lg bg-gradient-to-tr from-[#00E0B8] to-[#7C6CFF] text-slate-900 font-semibold">Open GitHub</a>
+        <a href="#projects" class="px-6 py-3 rounded-lg border border-white/8">Explore Projects</a>
       </div>
 
-      <p class="mt-6 text-xs opacity-60">Tip: add project screenshots, demos, and short videos to increase trust and click-through from Google results.</p>
+      <p class="mt-6 text-xs opacity-60">Tip: add short demo GIFs in an /assets folder and reference them here to increase engagement and trust.</p>
     </div>
   </section>
 
-  <footer class="py-8 text-center text-xs opacity-60 border-t border-white/4">
-    © <strong>Arun</strong> — Built with curiosity and urgency. Template: single-file portfolio — customize content freely.
+  <!-- FOOTER -->
+  <footer class="py-8 border-t border-white/6">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="text-xs opacity-70">© <strong>Arun</strong> — Built with curiosity and urgency.</div>
+      <div class="text-xs opacity-60 mt-2">Hosted on GitHub Pages • Source: <a href="https://github.com/Arun-developer123" class="underline-anim">github.com/Arun-developer123</a></div>
+    </div>
   </footer>
 
-  <!-- Scripts: interactions & reveal animations -->
+  <!-- INTERACTIONS: reveal on scroll, small parallax -->
   <script>
-    // Smooth scroll for anchor links
+    // Smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{ if(a.getAttribute('href') === '#') return; e.preventDefault(); const el = document.querySelector(a.getAttribute('href')); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); });
-    });
-
-    // Intersection Observer for reveal
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting) e.target.classList.add('visible');
+      a.addEventListener('click', e=>{
+        if(a.getAttribute('href') === '#') return;
+        e.preventDefault();
+        const el = document.querySelector(a.getAttribute('href'));
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
       });
-    },{threshold: 0.15});
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-    // tiny floating effect based on pointer
-    const hero = document.querySelector('.hero-blob');
-    window.addEventListener('pointermove', (ev)=>{
-      if(!hero) return;
-      const r = hero.getBoundingClientRect();
-      const cx = r.left + r.width/2; const cy = r.top + r.height/2;
-      const dx = (ev.clientX - cx) * 0.02; const dy = (ev.clientY - cy) * 0.02;
-      hero.style.transform = `translate(${dx}px, ${dy}px)`;
     });
+
+    // Intersection Observer for reveal animations
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        if (ent.isIntersecting) ent.target.classList.add('visible');
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // small parallax on hero visual
+    const heroBlob = document.querySelector('.glass svg');
+    window.addEventListener('pointermove', (ev) => {
+      if(!heroBlob) return;
+      const r = heroBlob.getBoundingClientRect();
+      const cx = r.left + r.width/2;
+      const cy = r.top + r.height/2;
+      const dx = (ev.clientX - cx) * 0.01;
+      const dy = (ev.clientY - cy) * 0.01;
+      heroBlob.style.transform = `translate(${dx}px, ${dy}px)`;
+    });
+
+    // small: reduce motion if user prefers reduced motion
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (prefersReduced.matches) {
+      document.querySelectorAll('.reveal').forEach(r => { r.style.transition = 'none'; r.classList.add('visible'); });
+      if(heroBlob) heroBlob.style.transform = 'none';
+    }
   </script>
 </body>
 </html>

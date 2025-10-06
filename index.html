@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arun — AI Innovator · Creator of Aura & TrueMate</title>
+  <meta name="description" content="Arun — Built Aura language, TrueMate AI and platform systems that modernize education, automation and labor marketplaces. Explore projects, demos and contact." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arun — AI Innovator & Creator of Aura" />
+  <meta property="og:description" content="By age 20 Arun shipped language tooling, deployable AI systems and platforms that solve real problems. Explore projects & demos." />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arun — AI Innovator & Creator of Aura" />
+
+  <!-- Schema.org JSON-LD (Person + sameAs) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arun",
+    "url": "https://arunboth.github.io",
+    "jobTitle": "AI Developer & Systems Innovator",
+    "sameAs": [
+      "https://github.com/arunboth",
+      "https://linkedin.com/in/arunboth"
+    ],
+    "description": "Builder of Aura language, TrueMate AI and multiple platforms that automate and humanize systems. Focus: practical AI, automation, and developer-first tools."
+  }
+  </script>
+
+  <!-- Fonts + Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{--bg:#060817;--card:#0b1220;--accent:#00E0B8;--muted:rgba(255,255,255,.65)}
+    html,body{height:100%}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:radial-gradient(1200px 600px at 10% 10%, rgba(14,165,164,0.06), transparent 8%), radial-gradient(1000px 500px at 90% 90%, rgba(79,70,229,0.05), transparent 6%), var(--bg); color: #e6eef6;}
+
+    /* Hero visuals */
+    .hero-blob{filter:drop-shadow(0 30px 60px rgba(2,6,23,0.6));}
+
+    /* cards */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04); backdrop-filter: blur(10px);}
+    .card:hover{transform:translateY(-10px) scale(1.01); transition: all .45s cubic-bezier(.2,.9,.3,1); box-shadow: 0 24px 60px rgba(2,6,23,0.6)}
+
+    /* subtle entrance */
+    .reveal{opacity:0; transform:translateY(18px) scale(.995); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.9,.3,1);}
+    .reveal.visible{opacity:1; transform:none}
+
+    /* animated underline */
+    .underline-anim{position:relative}
+    .underline-anim::after{content:''; position:absolute; left:0; bottom:-6px; width:0; height:4px; border-radius:999px; background:linear-gradient(90deg,var(--accent), #7C6CFF); transition:width .5s ease}
+    .underline-anim:hover::after{width:100%}
+
+    /* gradient text */
+    .gradient-text{background:linear-gradient(90deg,#7c6cff,#00e0b8); -webkit-background-clip:text; background-clip:text; color:transparent}
+
+    /* small screens fixes */
+    @media (max-width:640px){ .desktop-only{display:none} }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="w-full fixed top-4 left-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#1e293b] to-[#0ea5a4] flex items-center justify-center text-white font-extrabold shadow-md">AB</div>
+        <div class="text-sm text-slate-200">
+          <div class="font-semibold">Arun</div>
+          <div class="text-xs opacity-70">AI · Languages · Automation</div>
+        </div>
+      </a>
+      <nav class="flex items-center gap-3">
+        <a href="#projects" class="text-sm px-4 py-2 rounded-md hover:bg-white/5">Projects</a>
+        <a href="#about" class="text-sm px-4 py-2 rounded-md hover:bg-white/5">About</a>
+        <a href="#contact" class="text-sm px-4 py-2 rounded-md bg-gradient-to-tr from-[#00E0B8] to-[#7C6CFF] text-slate-900 font-semibold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-16">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">I build & ship the future — <span class="gradient-text">from language runtimes to human-like AI</span></h1>
+        <p class="mt-5 text-lg opacity-80">By 20 I shipped systems that reimagine how people interact with software. I design languages, runtime tooling, and AI that *does work* — not just research. My work powers education, automations, and real-world platforms that scale.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#projects" class="px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold shadow-md">Explore Projects</a>
+          <a href="#contact" class="px-6 py-3 rounded-lg border border-white/10">Work with me</a>
+        </div>
+
+        <div class="mt-8 flex gap-4 items-center text-sm opacity-80">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#0ea5a4]/10 flex items-center justify-center">🏆</div>
+            <div>
+              <div class="font-semibold">19 — 20</div>
+              <div class="text-xs">Ambitious years — shipped language & multiple AI systems</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#7c6cff]/10 flex items-center justify-center">⚡</div>
+            <div>
+              <div class="font-semibold">Fast Prototyper</div>
+              <div class="text-xs">From idea to demo in days</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-sm opacity-70">
+          <span class="font-medium">Practical highlights:</span> Aura (programming language), TrueMate AI (human-like assistant), Gurugram University portal (education records automation), targeted automation pipelines.
+        </div>
+      </div>
+
+      <div class="relative">
+        <!-- Animated hero illustration (SVG) -->
+        <div class="hero-blob w-full rounded-3xl card p-6">
+          <svg viewBox="0 0 600 360" class="w-full h-64 md:h-80">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#7C6CFF"/>
+                <stop offset="1" stop-color="#00E0B8"/>
+              </linearGradient>
+            </defs>
+            <rect rx="18" width="100%" height="100%" fill="url(#g1)" opacity="0.06" />
+            <g transform="translate(20,20)">
+              <rect x="0" y="0" width="240" height="120" rx="12" fill="#0b1220" stroke="rgba(255,255,255,0.03)" />
+              <text x="22" y="34" fill="#e6eef6" font-size="18" font-weight="600">Aura Playground — live REPL</text>
+              <rect x="18" y="50" width="200" height="6" rx="3" fill="#0ea5a4" opacity="0.15" />
+              <rect x="18" y="64" width="160" height="6" rx="3" fill="#7c6cff" opacity="0.12" />
+
+              <circle cx="420" cy="60" r="48" fill="#071022" stroke="rgba(255,255,255,0.03)" />
+              <text x="372" y="64" fill="#e6eef6" font-size="14">TrueMate</text>
+              <text x="372" y="82" fill="#a7b4c7" font-size="12">Human-like assistant</text>
+            </g>
+          </svg>
+
+          <div class="mt-4 grid grid-cols-3 gap-3">
+            <div class="p-3 card rounded-lg text-center">
+              <div class="font-semibold">Aura</div>
+              <div class="text-xs opacity-70 mt-1">Readable language • Fast prototyping</div>
+            </div>
+            <div class="p-3 card rounded-lg text-center">
+              <div class="font-semibold">Automation</div>
+              <div class="text-xs opacity-70 mt-1">Targeted pipelines • Gmail flows</div>
+            </div>
+            <div class="p-3 card rounded-lg text-center">
+              <div class="font-semibold">Platforms</div>
+              <div class="text-xs opacity-70 mt-1">Education & Labour</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- floating badges -->
+        <div class="absolute -right-6 -bottom-6 text-xs opacity-90">
+          <div class="card p-3 rounded-lg">Early prototype demos — available on GitHub</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="pb-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold underline-anim">Selected Work</h2>
+      <p class="mt-3 text-sm opacity-80">A selection of end-to-end systems I designed and shipped. Each item is a product, not just code.</p>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Card: Gurugram University -->
+        <article class="card p-6 rounded-2xl reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[#0ea5a4]/10 flex items-center justify-center">GU</div>
+            <div>
+              <h3 class="font-semibold">Gurugram University — Academic Record Portal</h3>
+              <p class="mt-2 text-xs opacity-75">Secure student record edits with moderator workflow, immutable audit logs, and a paperless intake that cut manual effort by ~90% during pilot runs.</p>
+              <div class="mt-3 flex gap-2">
+                <a class="text-xs px-3 py-1 rounded-full bg-white/5">React</a>
+                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Supabase</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Aura -->
+        <article class="card p-6 rounded-2xl reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[#7c6cff]/10 flex items-center justify-center">A</div>
+            <div>
+              <h3 class="font-semibold">Aura — Programming Language</h3>
+              <p class="mt-2 text-xs opacity-75">An English-first language designed for readability. Built lexer, parser, and a compact VM to demonstrate language ergonomics and teaching-first syntax.</p>
+              <div class="mt-3 flex gap-2">
+                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Lexer</a>
+                <a class="text-xs px-3 py-1 rounded-full bg-white/5">VM</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Playground -->
+        <article class="card p-6 rounded-2xl reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[#ffd166]/10 flex items-center justify-center">P</div>
+            <div>
+              <h3 class="font-semibold">Aura Playground</h3>
+              <p class="mt-2 text-xs opacity-75">Live REPL with instant sharing and collaborative demos. Built to teach and prototype language ideas within minutes.</p>
+              <div class="mt-3 flex gap-2">
+                <a class="text-xs px-3 py-1 rounded-full bg-white/5">WebAssembly</a>
+                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Editor</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Aura AI -->
+        <article class="card p-6 rounded-2xl reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[#00e0b8]/10 flex items-center justify-center">AI</div>
+            <div>
+              <h3 class="font-semibold">Aura AI — Targeted Automation Engine</h3>
+              <p class="mt-2 text-xs opacity-75">Automation pipelines that locate files, execute operations, and trigger outreach. Built with safety checks and an immutable log for auditability.</p>
+              <div class="mt-3 flex gap-2">
+                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Python</a>
+                <a class="text-xs px-3 py-1 rounded-full bg-white/5">Node</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: CSC -->
+        <article class="card p-6 rounded-2xl reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[#7c6cff]/10 flex items-center justify-center">CSC</div>
+            <div>
+              <h3 class="font-semibold">CSC Centre — Community Service Portal</h3>
+              <p class="mt-2 text-xs opacity-75">Accessible forms and low-bandwidth flows for citizens to request government and CSC services online.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: E‑Commerce -->
+        <article class="card p-6 rounded-2xl reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[#ffd166]/10 flex items-center justify-center">EC</div>
+            <div>
+              <h3 class="font-semibold">Clothing E‑Commerce</h3>
+              <p class="mt-2 text-xs opacity-75">Full-stack marketplace with merchant onboarding, dashboarding and optimized media pipelines.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: TrueMate -->
+        <article class="card p-6 rounded-2xl reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[#00e0b8]/10 flex items-center justify-center">TM</div>
+            <div>
+              <h3 class="font-semibold">TrueMate — Human-like Chat</h3>
+              <p class="mt-2 text-xs opacity-75">A proactive conversational agent focusing on emotional intelligence, privacy-first design and helpful autonomy.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card: Labour Chowk -->
+        <article class="card p-6 rounded-2xl reveal">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[#1e293b]/10 flex items-center justify-center">LC</div>
+            <div>
+              <h3 class="font-semibold">Labour Chowk — Worker App</h3>
+              <p class="mt-2 text-xs opacity-75">Digitizing local labour marketplaces with offline-first patterns, discovery and worker-first UX.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="mt-8 flex gap-3">
+        <a href="https://github.com/arunboth" target="_blank" class="px-4 py-2 rounded-md bg-white/5">View GitHub</a>
+        <a href="#contact" class="px-4 py-2 rounded-md bg-gradient-to-tr from-[#00E0B8] to-[#7C6CFF] text-slate-900 font-semibold">Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-12 border-t border-white/4">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-extrabold">About Arun</h2>
+      <p class="mt-4 opacity-80">I'm a product-minded engineer who iterates quickly and ships systems that people actually use. I combine low-level systems work (language runtimes, parsers) with product thinking and practical automation. My focus is impact: building tools that reduce human friction and unlock productivity.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="card p-6 rounded-lg reveal">
+          <div class="font-semibold">Engineer</div>
+          <div class="mt-2 text-xs opacity-70">Runtime engines, integrations, web infrastructure.</div>
+        </div>
+        <div class="card p-6 rounded-lg reveal">
+          <div class="font-semibold">Product</div>
+          <div class="mt-2 text-xs opacity-70">Clear flows, measurable outcomes, simple UX.</div>
+        </div>
+        <div class="card p-6 rounded-lg reveal">
+          <div class="font-semibold">Impact</div>
+          <div class="mt-2 text-xs opacity-70">Education, automation, and community-first platforms.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-extrabold">Work with me</h2>
+      <p class="mt-3 opacity-80">Looking for collaboration, mentorship, or speaking opportunities. I respond quickly to thoughtful messages — include a one-line brief.</p>
+
+      <div class="mt-6 flex justify-center gap-4">
+        <a href="mailto:contact@arunboth.com" class="px-6 py-3 rounded-lg bg-gradient-to-tr from-[#00E0B8] to-[#7C6CFF] text-slate-900 font-semibold">contact@arunboth.com</a>
+        <a href="https://github.com/arunboth" target="_blank" class="px-6 py-3 rounded-lg border border-white/8">GitHub</a>
+      </div>
+
+      <p class="mt-6 text-xs opacity-60">Tip: add project screenshots, demos, and short videos to increase trust and click-through from Google results.</p>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-xs opacity-60 border-t border-white/4">
+    © <strong>Arun</strong> — Built with curiosity and urgency. Template: single-file portfolio — customize content freely.
+  </footer>
+
+  <!-- Scripts: interactions & reveal animations -->
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{ if(a.getAttribute('href') === '#') return; e.preventDefault(); const el = document.querySelector(a.getAttribute('href')); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); });
+    });
+
+    // Intersection Observer for reveal
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('visible');
+      });
+    },{threshold: 0.15});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+    // tiny floating effect based on pointer
+    const hero = document.querySelector('.hero-blob');
+    window.addEventListener('pointermove', (ev)=>{
+      if(!hero) return;
+      const r = hero.getBoundingClientRect();
+      const cx = r.left + r.width/2; const cy = r.top + r.height/2;
+      const dx = (ev.clientX - cx) * 0.02; const dy = (ev.clientY - cy) * 0.02;
+      hero.style.transform = `translate(${dx}px, ${dy}px)`;
+    });
+  </script>
+</body>
+</html>

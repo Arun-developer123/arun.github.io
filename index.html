@@ -1,373 +1,425 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="JmpLODv_hXo58CjMl3S5GfFH6P1bjsFLOwOnvkZGPOw" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Arun — Builder of Languages, AI & Real Systems</title>
-  <meta name="description" content="Arun — maker of programming language prototypes, human-like assistants and pragmatic automation. Portfolio and demos." />
-  <meta name="author" content="Arun" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Arun — Builder of Languages, AI & Real Systems" />
-  <meta property="og:description" content="Maker of programming language prototypes, human-like assistants and pragmatic automation. Portfolio + demos." />
+  <!-- Google site verification (keep if valid for your domain) -->
+  <meta name="google-site-verification" content="JmpLODv_hXo58CjMl3S5GfFH6P1bjsFLOwOnvkZGPOw" />
+
+  <title>Both Innovations — Practical AI & Workforce Solutions</title>
+  <meta name="description" content="Both Innovations — Builders of TruMate AI and KaamLink. Practical AI and workforce platforms that make work fairer, faster and more private." />
+  <meta name="theme-color" content="#071022" />
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="Both Innovations — KaamLink & TruMate AI" />
+  <meta property="og:description" content="Both Innovations builds practical AI and productivity tools: TruMate AI and KaamLink." />
+  <meta property="og:image" content="/assets/logo.png" />
   <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Both Innovations — KaamLink & TruMate AI" />
+  <meta name="twitter:description" content="Practical AI & Workforce products from Both Innovations." />
+  <meta name="twitter:image" content="/assets/logo.png" />
 
-  <!-- Structured data: Person -->
+  <!-- JSON-LD (update "url" and "logo" to your real domain after deploy) -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Arun",
-    "url": "https://Arun-developer123.github.io",
-    "sameAs": [
-      "https://github.com/Arun-developer123"
-    ],
-    "jobTitle": "Maker • AI & Language Systems",
-    "description": "Builder of readable programming language prototypes, proactive conversational AI, and pragmatic automation & platform systems."
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Both Innovations",
+    "url":"https://bothinnovations.example",
+    "logo":"https://bothinnovations.example/assets/logo.png",
+    "contactPoint":[
+      {
+        "@type":"ContactPoint",
+        "telephone":"+91-9205645691",
+        "contactType":"customer support",
+        "email":"bothinnovations@gmail.com"
+      }
+    ]
   }
   </script>
 
-  <!-- Fonts + Tailwind (CDN quick setup) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
-    :root {
-      --bg: #040612;
-      --card: rgba(255,255,255,0.03);
-      --glass-border: rgba(255,255,255,0.04);
-      --accent-a: #7C6CFF;
-      --accent-b: #00E0B8;
+    :root{
+      --bg:#071022;
+      --card:#0f1724;
+      --text:#e6eef6;
+      --muted:#9aa7b8;
+      --accent:#00b894;
+      --accent-2:#6c5ce7;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    html,body { height:100%; }
-    body {
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
       margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: radial-gradient(900px 500px at 10% 20%, rgba(124,108,255,0.06), transparent 10%),
-                  radial-gradient(700px 400px at 90% 80%, rgba(0,224,184,0.04), transparent 8%),
-                  var(--bg);
-      color: #e9f0ff;
+      background: linear-gradient(180deg,#071022 0%, #07162a 60%);
+      color:var(--text);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      overflow-y:scroll;
-      -webkit-overflow-scrolling: touch;
+      line-height:1.5;
+      font-size:16px;
     }
-
-    /* Glass card */
-    .glass {
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(8px);
+    a{color:inherit}
+    .container{max-width:var(--maxw);margin:0 auto;padding:32px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:64px;height:64px;object-fit:contain;border-radius:12px;background:var(--glass);padding:6px}
+    .brand h1{font-size:18px;margin:0}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:48px 0}
+    .badge{display:inline-flex;gap:10px;align-items:center;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;color:#021214}
+    h2{font-size:34px;margin:12px 0 14px;line-height:1.02}
+    p.lead{color:var(--muted);font-size:17px;margin:0 0 20px}
+    .cta-row{display:flex;gap:12px;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700;text-decoration:none}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021214}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .founder{display:flex;gap:12px;align-items:center}
+    .founder img{width:76px;height:76px;border-radius:10px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    .feature{padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
+    .product{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:60px 0}
+    .product.alt{grid-template-columns:420px 1fr}
+    .hero-ill{border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#051018,#0a1730);padding:18px}
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;text-align:center;flex:1}
+    .highlight{color:var(--accent);font-weight:800}
+    footer{border-top:1px solid rgba(255,255,255,0.03);padding:26px 0;margin-top:40px;color:var(--muted)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .checks{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .checks li{list-style:none}
+    .checks li:before{content:"✓";color:var(--accent);margin-right:8px}
+    .small{font-size:13px;color:var(--muted)}
+    input,textarea{font-family:inherit}
+    input[type="text"], input[type="email"], textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--text)}
+    button[type="submit"]{border:0}
+    @media (max-width:980px){
+      .hero,.product,.product.alt{grid-template-columns:1fr; }
+      .features{grid-template-columns:1fr; }
+      .contact-grid{grid-template-columns:1fr}
     }
-
-    /* Cinematic hero text */
-    .big-title {
-      font-weight:800;
-      line-height:1.02;
-      letter-spacing:-0.01em;
-    }
-
-    /* gradient text */
-    .gtext { 
-      background: linear-gradient(90deg, var(--accent-a), var(--accent-b));
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-
-    /* subtle card hover */
-    .project:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(2,6,23,0.6); transition: all .45s cubic-bezier(.2,.9,.3,1); }
-
-    /* reveal animations */
-    .reveal { opacity:0; transform: translateY(18px) scale(.995); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.9,.3,1); }
-    .reveal.visible { opacity:1; transform: none; }
-
-    /* animated underline on hover */
-    .underline-anim { position:relative; display:inline-block; }
-    .underline-anim::after { content:''; position:absolute; left:0; bottom:-6px; width:0; height:4px; border-radius:999px; background: linear-gradient(90deg,var(--accent-b), var(--accent-a)); transition: width .45s ease; }
-    .underline-anim:hover::after { width:100%; }
-
-    /* hero particle dots */
-    .particle { fill: rgba(255,255,255,0.06); }
-
-    /* footer tiny */
-    footer { color: rgba(233,240,255,0.55); }
-
-    @media (max-width:640px) {
-      .desktop-only { display:none; }
-      .big-title { font-size: 2rem; }
-    }
-    @media (min-width:641px) {
-      .big-title { font-size: clamp(38px, 6vw, 64px); }
-    }
+    .fade-up{opacity:0;transform:translateY(12px);animation:up .6s ease forwards}
+    @keyframes up{to{opacity:1;transform:none}}
+    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
   </style>
 </head>
 <body>
-  <!-- NAV -->
-  <header class="fixed w-full z-40 top-4">
-    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#151a2b] to-[#0ea5a4] flex items-center justify-center text-white font-extrabold shadow">A</div>
-        <div class="text-sm">
-          <div class="font-semibold">Arun</div>
-          <div class="text-xs opacity-70">Maker · AI · Languages</div>
-        </div>
-      </a>
-
-      <nav class="flex items-center gap-3">
-        <a href="#projects" class="text-sm px-3 py-2 rounded hover:bg-white/5">Projects</a>
-        <a href="#about" class="text-sm px-3 py-2 rounded hover:bg-white/5">About</a>
-        <a href="https://github.com/Arun-developer123" target="_blank" class="text-sm px-3 py-2 rounded bg-gradient-to-tr from-var(--accent-b) to-var(--accent-a) text-slate-900 font-semibold">GitHub</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO / Cinematic launch -->
-  <section class="pt-28 pb-12">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-      <div class="reveal" id="hero-left">
-        <h1 class="big-title">
-          I build tools that <span class="gtext">actually work</span><br class="desktop-only" />
-          — languages, AI & real systems.
-        </h1>
-
-        <p class="mt-6 text-lg opacity-80 max-w-xl">
-          I'm <strong>Arun</strong> — I turn bold ideas into working prototypes and production experiences: readable languages, proactive assistants, and automation pipelines that remove friction from the real world.
-        </p>
-
-        <div class="mt-6 flex gap-3">
-          <a href="#projects" class="px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold shadow">Explore Work</a>
-          <a href="https://github.com/Arun-developer123" target="_blank" class="px-6 py-3 rounded-lg border border-white/10">View GitHub</a>
-        </div>
-
-        <div class="mt-6 text-sm opacity-70">
-          <strong>Quick facts:</strong> language design • runtime & tooling • conversational AI • real-world automation.
-        </div>
-      </div>
-
-      <div class="reveal" id="hero-right">
-        <!-- cinematic visual: SVG + floating card -->
-        <div class="glass rounded-3xl p-6 relative overflow-hidden">
-          <!-- SVG particles / soft shapes -->
-          <svg viewBox="0 0 600 360" class="w-full h-64 mb-4" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs>
-              <linearGradient id="lg1" x1="0" x2="1">
-                <stop offset="0" stop-color="#7C6CFF"/>
-                <stop offset="1" stop-color="#00E0B8"/>
-              </linearGradient>
-            </defs>
-            <rect width="100%" height="100%" rx="14" fill="rgba(7,10,20,0.6)"/>
-            <g transform="translate(20,20)">
-              <rect x="0" y="0" rx="10" width="230" height="110" fill="rgba(255,255,255,0.02)"/>
-              <text x="18" y="32" fill="#e9f0ff" font-size="16" font-weight="700">Aura Playground — live REPL</text>
-              <rect x="18" y="52" width="200" height="8" rx="4" fill="#0ea5a4" opacity="0.12"/>
-              <rect x="18" y="72" width="150" height="8" rx="4" fill="#7c6cff" opacity="0.10"/>
-              <circle cx="420" cy="60" r="48" class="particle"/>
-              <text x="372" y="64" fill="#e9f0ff" font-size="13">TrueMate</text>
-              <text x="372" y="82" fill="#b8c6dd" font-size="11">Human-like assistant</text>
-            </g>
-          </svg>
-
-          <div class="grid grid-cols-3 gap-3">
-            <div class="p-3 glass rounded-lg text-center">
-              <div class="font-semibold">Aura</div>
-              <div class="text-xs opacity-70 mt-1">Readable language • Fast prototyping</div>
-            </div>
-            <div class="p-3 glass rounded-lg text-center">
-              <div class="font-semibold">Automation</div>
-              <div class="text-xs opacity-70 mt-1">Targeted pipelines • Audits</div>
-            </div>
-            <div class="p-3 glass rounded-lg text-center">
-              <div class="font-semibold">Platforms</div>
-              <div class="text-xs opacity-70 mt-1">Education & Labour</div>
-            </div>
-          </div>
-
-          <div class="absolute -right-8 -bottom-6 text-xs">
-            <div class="glass p-2 rounded-lg">Demos on GitHub</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="pb-12">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex items-center justify-between">
+  <div class="container">
+    <header>
+      <div class="brand" aria-hidden="false">
+        <img src="/assets/logo.png" alt="Both Innovations logo" onerror="this.style.display='none'"/>
         <div>
-          <h2 class="text-3xl font-extrabold underline-anim">Selected Work</h2>
-          <p class="mt-2 text-sm opacity-80">End-to-end systems I designed and shipped — product-oriented, pragmatic, and user-centred.</p>
+          <h1>Both Innovations</h1>
+          <div class="small">Founder &amp; CEO: Arun — <a href="mailto:bothinnovations@gmail.com" style="color:inherit;text-decoration:underline;">bothinnovations@gmail.com</a></div>
         </div>
-        <div class="text-sm opacity-70">View more on <a href="https://github.com/Arun-developer123" class="underline-anim">GitHub</a></div>
       </div>
 
-      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Card 1 -->
-        <article class="project glass p-6 rounded-2xl reveal">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-[#0ea5a4]/10 flex items-center justify-center">GU</div>
+      <nav aria-label="Primary navigation">
+        <a href="#kaamlink">KaamLink</a>
+        <a href="#truemate">TruMate AI</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <span class="badge fade-up" style="animation-delay:.05s">Both Innovations — Practical AI & Workforce</span>
+
+          <h2 id="hero-title" class="fade-up" style="animation-delay:.12s">
+            Building tools that reduce busywork and create fair economic opportunity.
+          </h2>
+
+          <p class="lead fade-up" style="animation-delay:.2s">
+            Both Innovations ships practical, privacy-minded products — <strong>TruMate AI</strong> (context-aware assistant) and <strong>KaamLink</strong> (verified workforce marketplace) — designed for teams, creators and verified workers.
+          </p>
+
+          <div class="cta-row fade-up" style="animation-delay:.3s">
+            <a class="btn btn-primary" href="#kaamlink">Explore KaamLink →</a>
+            <a class="btn btn-ghost" href="#truemate">See TruMate AI</a>
+          </div>
+
+          <div class="stats fade-up" style="animation-delay:.4s" aria-hidden="true">
+            <div class="stat">
+              <div class="small">Verified Talent</div>
+              <div class="highlight">10,000+</div>
+            </div>
+            <div class="stat">
+              <div class="small">Payments</div>
+              <div class="highlight">Escrow & Confirmed Payouts</div>
+            </div>
+            <div class="stat">
+              <div class="small">AI</div>
+              <div class="highlight">Proactive & Privacy-first</div>
+            </div>
+          </div>
+
+          <div style="margin-top:18px" class="small">Phone: <a href="tel:+919205645691" style="color:inherit;text-decoration:underline;">+91 92056 45691</a> · Email: <a href="mailto:bothinnovations@gmail.com" style="color:inherit;text-decoration:underline;">bothinnovations@gmail.com</a></div>
+        </div>
+
+        <aside class="card hero-ill fade-up" style="animation-delay:.5s" aria-hidden="true">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div>
+                <div class="pill">KaamLink — Skilled & Verified</div>
+                <div class="logo-path small" style="margin-top:8px">Logo: /assets/logo.png</div>
+              </div>
+
+              <div style="text-align:right">
+                <div class="small">Founder</div>
+                <div class="founder" style="margin-top:8px">
+                  <img src="/assets/founder.jpg" alt="Arun — Founder & CEO" onerror="this.style.display='none'"/>
+                  <div style="margin-left:8px">
+                    <div style="font-weight:800">Arun</div>
+                    <div class="small">Founder &amp; CEO</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="font-style:italic;color:var(--muted);border-left:3px solid rgba(255,255,255,0.03);padding-left:14px;margin:10px 0">
+              "We build tools that put people first — verified opportunity for workers, and privacy-first AI for everyone." — Arun
+            </div>
+
+            <div style="display:flex;gap:10px;align-items:center;justify-content:space-between">
+              <a class="btn btn-primary" href="#contact">Get in touch</a>
+              <div class="small">Explore our products below ↓</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card" aria-labelledby="features-title" style="margin-top:20px">
+        <h3 id="features-title" style="margin:0 0 10px">Why Both Innovations</h3>
+        <div class="features" role="list">
+          <div class="feature fade-up" style="animation-delay:.05s" role="listitem">
+            <h4 style="margin:0 0 6px">Human-first verification</h4>
+            <p class="small">Worker profiles are verified with identity and skill checks so customers hire confidently.</p>
+          </div>
+          <div class="feature fade-up" style="animation-delay:.12s" role="listitem">
+            <h4 style="margin:0 0 6px">Secure payments</h4>
+            <p class="small">Escrow and clear payouts protect both customers and workers.</p>
+          </div>
+          <div class="feature fade-up" style="animation-delay:.18s" role="listitem">
+            <h4 style="margin:0 0 6px">Responsible AI</h4>
+            <p class="small">TruMate emphasizes privacy, control and human-like helpfulness rather than surprise behaviours.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="kaamlink" class="product" aria-labelledby="kaamlink-title">
+        <div>
+          <h3 id="kaamlink-title">KaamLink — Verified Skilled Marketplace</h3>
+          <p class="small">
+            KaamLink connects verified skilled workers (labours, electricians, plumbers, camera crews, technicians) directly with customers — removing intermediaries and ensuring fair, timely payouts backed by platform protections.
+          </p>
+
+          <ul class="checks" aria-hidden="false">
+            <li>Direct access to verified talent — no middleman.</li>
+            <li>Skill endorsements, portfolio checks and on-site verification.</li>
+            <li>Escrow payments & transparent fees.</li>
+            <li>Worker welfare support and guidance to government schemes.</li>
+            <li>Autonomous matching to find the right worker quickly.</li>
+          </ul>
+
+          <div style="margin-top:18px" class="cta-row">
+            <a class="btn btn-primary" href="https://workers-taupe.vercel.app/" target="_blank" rel="noopener">Visit Kaamlink</a>
+            <a class="btn btn-ghost" href="#contact">Hire a worker</a>
+          </div>
+        </div>
+
+        <aside class="card" aria-hidden="true">
+          <h4 style="margin:0 0 8px">KaamLink — At a glance</h4>
+          <div style="margin-top:8px">
+            <strong>Who we serve:</strong>
+            <p class="small">Skilled field workers and customers who need reliable, verified talent.</p>
+          </div>
+          <div style="margin-top:8px">
+            <strong>What we solve:</strong>
+            <p class="small">Middleman exploitation, late payments and unverified hires — solved with verification and escrow.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="truemate" class="product alt" aria-labelledby="truemate-title">
+        <aside class="card" aria-hidden="true">
+          <h4 style="margin:0 0 8px">TruMate AI — Context-aware Companion</h4>
+          <p class="small">TruMate provides helpful nudges, summaries and context-aware suggestions while keeping user privacy and control front-and-center.</p>
+
+          <ul class="checks">
+            <li>Contextual summaries for chats and meetings.</li>
+            <li>Personalized auto-replies and follow-ups.</li>
+            <li>Privacy-first architecture and enterprise controls.</li>
+          </ul>
+
+          <div style="margin-top:14px" class="cta-row">
+            <a class="btn btn-primary" href="https://www.truemateai.com/" target="_blank" rel="noopener">Explore TruMate</a>
+            <a class="btn btn-ghost" href="#contact">Request demo</a>
+          </div>
+        </aside>
+
+        <div>
+          <h3 id="truemate-title">A practical, proactive AI — made safe</h3>
+          <p class="small">
+            TruMate is built to be useful — it proactively reminds you about tasks, summarizes long conversations, and helps manage daily flow while respecting user choice and data protection settings.
+          </p>
+
+          <div style="margin-top:12px">
+            <strong>Key pillars:</strong>
+            <div class="small" style="margin-top:8px">
+              <ol style="padding-left:18px">
+                <li><strong>Proactivity:</strong> Timely nudges and follow-ups.</li>
+                <li><strong>Realism:</strong> Natural conversation flow for better adoption.</li>
+                <li><strong>Reliability:</strong> Fast, lightweight integrations.</li>
+                <li><strong>Privacy:</strong> User controls and enterprise compliance options.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:30px">
+        <h3>Vision</h3>
+        <p class="small">
+          We aim to combine human dignity and technical scale: more verified opportunities for workers and AI that helps people get meaningful work done.
+        </p>
+      </section>
+
+      <section id="contact" style="margin-top:30px">
+        <div class="card">
+          <h3>Contact Arun &amp; Team</h3>
+          <div class="contact-grid" style="margin-top:12px">
             <div>
-              <h3 class="font-semibold">Education Records Portal</h3>
-              <p class="mt-2 text-xs opacity-75">Paperless intake and secure moderation flows that drastically reduce manual admin overhead for student record edits.</p>
-              <div class="mt-3 flex gap-2">
-                <span class="text-xs px-3 py-1 rounded-full bg-white/5">React</span>
-                <span class="text-xs px-3 py-1 rounded-full bg-white/5">Supabase</span>
+              <p class="small">Founder &amp; CEO: <strong>Arun</strong></p>
+              <p class="small">Phone: <a href="tel:+919205645691" style="color:inherit;text-decoration:underline;">+91 92056 45691</a></p>
+              <p class="small">Email: <a href="mailto:bothinnovations@gmail.com" style="color:inherit;text-decoration:underline;">bothinnovations@gmail.com</a></p>
+
+              <!--
+                Production-ready contact form:
+                - Primary: FormSubmit (no backend). It posts to FormSubmit which forwards to bothinnovations@gmail.com.
+                - Fallback: if network/CORS fails, JS will open the user's mail client (mailto).
+                Replace FormSubmit endpoint with your own server/API for full control.
+              -->
+              <form id="contactForm" action="https://formsubmit.co/bothinnovations@gmail.com" method="POST" onsubmit="return handleFormSubmit(event)" style="margin-top:12px" novalidate>
+                <!-- anti-spam/honeypot for FormSubmit -->
+                <input type="text" name="_honey" class="visually-hidden" autocomplete="off" />
+                <input type="hidden" name="_subject" value="Website contact — Both Innovations" />
+                <input type="hidden" name="_captcha" value="false" />
+                <!-- optional: redirect after success (replace domain) -->
+                <!-- <input type="hidden" name="_next" value="https://bothinnovations.example/thank-you.html" /> -->
+
+                <label class="small" for="name">Your name</label><br/>
+                <input id="name" name="name" type="text" required placeholder="Your name" />
+
+                <label class="small" for="email" style="margin-top:10px;display:block">Email (optional)</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" />
+
+                <label class="small" for="message" style="margin-top:10px;display:block">Message</label>
+                <textarea id="message" name="message" required placeholder="Type a quick message" style="height:110px"></textarea>
+
+                <div style="margin-top:10px;display:flex;gap:8px">
+                  <button class="btn btn-primary" type="submit" id="sendBtn">Send Message</button>
+                  <a class="btn btn-ghost" href="mailto:bothinnovations@gmail.com?subject=Contact%20from%20website">Or email directly</a>
+                </div>
+
+                <div id="formNote" class="small" style="margin-top:10px;color:var(--muted)"></div>
+              </form>
+            </div>
+
+            <div>
+              <h4 style="margin:0 0 8px">Quick Links</h4>
+              <ul style="padding-left:16px">
+                <li><a style="color:inherit" href="https://workers-taupe.vercel.app/" target="_blank" rel="noopener">KaamLink</a></li>
+                <li><a style="color:inherit" href="https://www.truemateai.com/" target="_blank" rel="noopener">TruMate AI</a></li>
+                <li><a style="color:inherit" href="#vision">Our Vision</a></li>
+              </ul>
+
+              <div style="margin-top:18px">
+                <strong>Office</strong>
+                <p class="small" style="margin-top:6px">Both Innovations — Corporate HQ<br/>Contact: <a href="tel:+919205645691" style="color:inherit;text-decoration:underline;">+91 92056 45691</a></p>
+              </div>
+
+              <div style="margin-top:18px">
+                <strong>Legal &amp; Safety</strong>
+                <p class="small">Both Innovations is Udyam registered. KaamLink provides worker welfare facilitation and an injury support program where applicable.</p>
               </div>
             </div>
           </div>
-        </article>
+        </div>
+      </section>
+    </main>
 
-        <!-- Card 2 -->
-        <article class="project glass p-6 rounded-2xl reveal">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-[#7c6cff]/10 flex items-center justify-center">A</div>
-            <div>
-              <h3 class="font-semibold">Aura — Programming Language</h3>
-              <p class="mt-2 text-xs opacity-75">An English-first language prototype focused on clarity and rapid learning; includes lexer, parser and a demonstration VM.</p>
-              <div class="mt-3 flex gap-2">
-                <span class="text-xs px-3 py-1 rounded-full bg-white/5">Language</span>
-                <span class="text-xs px-3 py-1 rounded-full bg-white/5">VM</span>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="project glass p-6 rounded-2xl reveal">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-[#ffd166]/10 flex items-center justify-center">P</div>
-            <div>
-              <h3 class="font-semibold">Aura Playground</h3>
-              <p class="mt-2 text-xs opacity-75">Live REPL for rapid prototyping with instant share links and collaborative demos.</p>
-              <div class="mt-3 flex gap-2">
-                <span class="text-xs px-3 py-1 rounded-full bg-white/5">REPL</span>
-                <span class="text-xs px-3 py-1 rounded-full bg-white/5">WebAssembly</span>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="project glass p-6 rounded-2xl reveal">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-[#00e0b8]/10 flex items-center justify-center">AI</div>
-            <div>
-              <h3 class="font-semibold">TrueMate — Proactive Assistant</h3>
-              <p class="mt-2 text-xs opacity-75">A privacy-minded conversational agent designed to be helpful, proactive and human-like in daily interactions.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 5 -->
-        <article class="project glass p-6 rounded-2xl reveal">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-[#7c6cff]/10 flex items-center justify-center">CSC</div>
-            <div>
-              <h3 class="font-semibold">Community Service Portal</h3>
-              <p class="mt-2 text-xs opacity-75">Accessibility-first flows for citizens to request local services using low-bandwidth patterns.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 6 -->
-        <article class="project glass p-6 rounded-2xl reveal">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-[#1e293b]/10 flex items-center justify-center">LC</div>
-            <div>
-              <h3 class="font-semibold">Labour Chowk — Worker App</h3>
-              <p class="mt-2 text-xs opacity-75">Digitizing day-labor marketplaces with discovery, offline support and worker-first UX patterns.</p>
-            </div>
-          </div>
-        </article>
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="small">© <strong>Both Innovations</strong> — Built for dignity, trust &amp; the next wave of tech. Founder &amp; CEO: Arun</div>
+        <div class="small">Email: <a href="mailto:bothinnovations@gmail.com" style="color:inherit;text-decoration:underline;">bothinnovations@gmail.com</a></div>
       </div>
+    </footer>
+  </div>
 
-      <div class="mt-8">
-        <a href="https://github.com/Arun-developer123" target="_blank" class="px-4 py-2 rounded bg-white/5">See code & demos on GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="py-12 border-t border-white/6">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-2xl font-extrabold">About Arun</h2>
-      <p class="mt-4 opacity-80">I combine low-level systems work (language runtimes, parsers) with product-first thinking and practical automation. My aim: build tools that reduce human friction and scale to real users.</p>
-
-      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div class="glass p-6 rounded-lg reveal"><div class="font-semibold">Engineer</div><div class="mt-2 text-xs opacity-70">Runtimes, parsers, infrastructure.</div></div>
-        <div class="glass p-6 rounded-lg reveal"><div class="font-semibold">Product</div><div class="mt-2 text-xs opacity-70">Clear UX, reliable flows, measurable outcomes.</div></div>
-        <div class="glass p-6 rounded-lg reveal"><div class="font-semibold">Impact</div><div class="mt-2 text-xs opacity-70">Education, automation, community tools.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-12">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-2xl font-extrabold">Contact</h2>
-      <p class="mt-3 opacity-80">For collaboration, demos or to see code, open an issue or message me on GitHub. Include a one-line brief and I'll reply.</p>
-
-      <div class="mt-6 flex justify-center gap-4">
-        <a href="https://github.com/Arun-developer123" target="_blank" class="px-6 py-3 rounded-lg bg-gradient-to-tr from-[#00E0B8] to-[#7C6CFF] text-slate-900 font-semibold">Open GitHub</a>
-        <a href="#projects" class="px-6 py-3 rounded-lg border border-white/8">Explore Projects</a>
-      </div>
-
-      <p class="mt-6 text-xs opacity-60">Tip: add short demo GIFs in an /assets folder and reference them here to increase engagement and trust.</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-8 border-t border-white/6">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <div class="text-xs opacity-70">© <strong>Arun</strong> — Built with curiosity and urgency.</div>
-      <div class="text-xs opacity-60 mt-2">Hosted on GitHub Pages • Source: <a href="https://github.com/Arun-developer123" class="underline-anim">github.com/Arun-developer123</a></div>
-    </div>
-  </footer>
-
-  <!-- INTERACTIONS: reveal on scroll, small parallax -->
   <script>
-    // Smooth scroll for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        if(a.getAttribute('href') === '#') return;
-        e.preventDefault();
-        const el = document.querySelector(a.getAttribute('href'));
-        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
-      });
-    });
+    // Basic UX + robust contact submit:
+    // - Try POSTing via fetch to FormSubmit
+    // - If that fails, fallback to opening mail client (mailto)
+    // Note: Using FormSubmit endpoint: https://formsubmit.co/bothinnovations@gmail.com
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      const form = e.currentTarget;
+      const note = document.getElementById('formNote');
+      note.textContent = '';
+      const name = (form.querySelector('#name') || {}).value?.trim();
+      const message = (form.querySelector('#message') || {}).value?.trim();
+      const email = (form.querySelector('#email') || {}).value?.trim();
 
-    // Intersection Observer for reveal animations
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(ent => {
-        if (ent.isIntersecting) ent.target.classList.add('visible');
-      });
-    }, { threshold: 0.16 });
+      if (!name || !message) {
+        note.textContent = 'Please enter your name and a message.';
+        return false;
+      }
 
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+      const sendBtn = document.getElementById('sendBtn');
+      sendBtn.disabled = true;
+      sendBtn.textContent = 'Sending…';
 
-    // small parallax on hero visual
-    const heroBlob = document.querySelector('.glass svg');
-    window.addEventListener('pointermove', (ev) => {
-      if(!heroBlob) return;
-      const r = heroBlob.getBoundingClientRect();
-      const cx = r.left + r.width/2;
-      const cy = r.top + r.height/2;
-      const dx = (ev.clientX - cx) * 0.01;
-      const dy = (ev.clientY - cy) * 0.01;
-      heroBlob.style.transform = `translate(${dx}px, ${dy}px)`;
-    });
+      // Prepare form data for FormSubmit
+      const action = form.getAttribute('action') || '';
+      const formData = new FormData(form);
 
-    // small: reduce motion if user prefers reduced motion
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (prefersReduced.matches) {
-      document.querySelectorAll('.reveal').forEach(r => { r.style.transition = 'none'; r.classList.add('visible'); });
-      if(heroBlob) heroBlob.style.transform = 'none';
+      try {
+        // Try fetch POST (FormSubmit supports CORS and accepts POSTs)
+        const resp = await fetch(action, { method: 'POST', body: formData, mode: 'cors' });
+        if (resp.ok || resp.type === 'opaque') {
+          // Many endpoints redirect; treat as success
+          note.textContent = 'Message sent — thank you! We will reply soon.';
+          form.reset();
+          sendBtn.disabled = false;
+          sendBtn.textContent = 'Send Message';
+          return false;
+        } else {
+          throw new Error('non-ok response');
+        }
+      } catch (err) {
+        // Fallback to mailto
+        const subject = encodeURIComponent('Website contact — ' + name);
+        let body = message + '\\n\\nFrom: ' + name;
+        if (email) body += '\\nEmail: ' + email;
+        window.location.href = `mailto:bothinnovations@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
+        sendBtn.disabled = false;
+        sendBtn.textContent = 'Send Message';
+        return false;
+      }
     }
+
+    // staggered fade animation
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-up').forEach((el, i) => {
+        (el).style.animationDelay = (0.05 + i * 0.04) + 's';
+      });
+    });
   </script>
 </body>
 </html>

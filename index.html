@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0f1724" />
-  <meta name="description" content="Arun — CEO & Founder, Both Innovations. Building TruMate AI & KaamLink: practical AI and workforce platforms that reduce busywork and create fair economic opportunity." />
   <title>Arun — CEO & Founder, Both Innovations</title>
+  <meta name="description" content="Arun — CEO & Founder of Both Innovations. Building practical AI and workforce products: TruMate AI & KaamLink. Contact: bothinnovations@gmail.com • +91 92056 45691" />
+  <meta name="theme-color" content="#0b1020" />
 
-  <!-- Google site verification (keep if valid) -->
-  <meta name="google-site-verification" content="JmpLODv_hXo58CjMl3S5GfFH6P1bjsFLOwOnvkZGPOw" />
-
-  <!-- Social / Open Graph -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Arun — CEO & Founder, Both Innovations" />
-  <meta property="og:description" content="Arun leads Both Innovations — creators of TruMate AI and KaamLink. Practical AI & workforce solutions." />
+  <meta property="og:description" content="Practical AI & workforce products from Both Innovations — TruMate AI and KaamLink." />
   <meta property="og:image" content="/assets/logo.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="/assets/logo.png" />
 
-  <!-- Google Font: Inter -->
+  <!-- Google verification (optional) -->
+  <meta name="google-site-verification" content="JmpLODv_hXo58CjMl3S5GfFH6P1bjsFLOwOnvkZGPOw" />
+
+  <!-- Preload font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD (update domain when live) -->
+  <!-- Structured data (update domain when live) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -33,8 +33,7 @@
         "name":"Arun",
         "jobTitle":"CEO & Founder",
         "worksFor":{"@type":"Organization","name":"Both Innovations","url":"https://bothinnovations.example"},
-        "url":"https://bothinnovations.example",
-        "sameAs":[]
+        "url":"https://bothinnovations.example"
       },
       {
         "@type":"Organization",
@@ -48,17 +47,24 @@
   </script>
 
   <style>
+    /*
+      New theme: "Modern Warm Contrast"
+      - Accent palette: Sunset Orange + Teal
+      - Clean, roomy typography
+      - Prominent, high-quality portrait styling
+      - Fully responsive single-file production-ready HTML/CSS/JS
+    */
     :root{
-      --bg-1: linear-gradient(180deg,#071124 0%, #081427 60%);
-      --card: rgba(255,255,255,0.03);
-      --muted: #9fb0c2;
-      --text: #e9f1f7;
-      --accent: #00d1a6;
-      --accent-2: #6c5ce7;
-      --glass: rgba(255,255,255,0.04);
-      --maxw:1200px;
+      --bg:#07121b;
+      --panel:#0e1720;
+      --muted:#9fb0bd;
+      --text:#eaf4f8;
+      --accent-1:#ff7a59;  /* sunset orange */
+      --accent-2:#00c2a8;  /* teal */
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1180px;
       --radius:14px;
-      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
     }
@@ -66,114 +72,93 @@
     html,body{height:100%}
     body{
       margin:0;
-      background: var(--bg-1);
+      background: linear-gradient(180deg,var(--bg) 0%, #071627 60%);
       color:var(--text);
-      line-height:1.5;
       font-size:16px;
+      line-height:1.5;
     }
     a{color:inherit}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:36px 22px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{width:56px;height:56px;object-fit:contain;border-radius:12px;background:var(--glass);padding:6px}
-    .brand .title{font-weight:800;font-size:18px;letter-spacing:0.2px}
-    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600;font-size:14px}
+    .page{max-width:var(--maxw);margin:0 auto;padding:36px 20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo img{width:56px;height:56px;object-fit:contain;border-radius:12px;background:var(--glass);padding:6px}
+    .brand-name{font-weight:800;font-size:18px;letter-spacing:0.2px}
+    nav a{color:var(--muted);margin-left:16px;font-weight:600;text-decoration:none;font-size:14px}
     nav a:hover{color:var(--text);text-decoration:underline}
 
-    /* HERO: big photo + elegant card */
-    .hero{
-      display:grid;
-      grid-template-columns: 1fr 420px;
-      gap:28px;
-      align-items:stretch;
-      margin-top:6px;
-    }
-    .hero-left{display:flex;flex-direction:column;justify-content:center;gap:18px;padding-right:6px}
-    .kicker{display:inline-block;padding:8px 12px;border-radius:999px;font-weight:800;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021214;font-size:13px}
-    h1{font-size:36px;margin:0;line-height:1.02}
-    p.lead{color:var(--muted);margin:0;max-width:64ch;font-size:17px}
-    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:700;text-decoration:none;font-size:15px}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021214}
-    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-    .meta{color:var(--muted);font-size:14px;margin-top:6px}
+    /* Hero layout */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:stretch}
+    .hero-left{display:flex;flex-direction:column;justify-content:center;gap:16px;padding-right:6px}
+    .kicker{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;font-weight:700;background:linear-gradient(90deg,var(--accent-2),var(--accent-1));color:#061018;font-size:13px;width:fit-content}
+    h1{font-size:34px;margin:0;line-height:1.03}
+    .subtitle{color:var(--muted);font-size:16px;max-width:62ch;margin:0}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:700;text-decoration:none}
+    .btn-primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#05121a}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .contact-line{color:var(--muted);font-size:14px;margin-top:6px}
 
-    /* right: big circular portrait inside a glass card */
-    .hero-right{display:flex;flex-direction:column;align-items:center;gap:16px;padding:18px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow: 0 8px 40px rgba(2,6,23,0.6);min-height:100%}
-    .portrait-wrap{
-      width:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .portrait{
-      width:320px;
-      height:320px;
-      border-radius:50%;
-      overflow:hidden;
-      border: 6px solid rgba(255,255,255,0.04);
-      box-shadow: 0 20px 60px rgba(2,10,30,0.6), 0 2px 8px rgba(0,0,0,0.5);
-      background: linear-gradient(180deg,#06121a,#0b2030);
-      transform: translateY(-6px);
-    }
-    .portrait img{width:100%;height:100%;object-fit:cover;display:block}
-    .portrait-caption{font-weight:700;margin-top:6px}
-    .portrait-sub{color:var(--muted);font-size:13px;margin-top:2px}
+    /* Right panel portrait card (new look) */
+    .hero-right{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:20px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;align-items:center;gap:12px;box-shadow:0 18px 60px rgba(2,6,23,0.6)}
+    .portrait-frame{width:320px;height:420px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#061221,#0a2230);display:flex;align-items:center;justify-content:center;border:6px solid rgba(255,255,255,0.03)}
+    .portrait{width:100%;height:100%;object-fit:cover;display:block}
+    .portrait-overlay{position:relative}
+    .portrait-badge{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,0.35);backdrop-filter: blur(6px);padding:8px 12px;border-radius:999px;font-weight:700;color:var(--text);font-size:13px}
+    .portrait-name{font-weight:800;margin-top:6px;font-size:16px}
+    .portrait-meta{color:var(--muted);font-size:13px}
 
-    /* sections */
-    .section{margin-top:40px}
-    h2.section-title{font-size:20px;margin:0 0 12px}
-    .card{background:var(--card);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.02)}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    /* sections & cards */
+    .section{margin-top:34px}
+    .sec-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .sec-title h2{margin:0;font-size:20px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:12px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+    .card{background:var(--panel);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.02)}
 
+    /* product list */
     .product{display:flex;gap:12px;align-items:flex-start}
-    .product .icon{width:56px;height:56px;border-radius:12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#021214}
+    .product .mark{width:56px;height:56px;border-radius:12px;background:linear-gradient(90deg,var(--accent-2),var(--accent-1));display:flex;align-items:center;justify-content:center;font-weight:800;color:#061018}
 
     /* blog */
-    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
     .post{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:10px;padding:14px;border:1px solid rgba(255,255,255,0.02)}
     .post h3{margin:0 0 8px;font-size:18px}
     .post .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .post p{margin:0;color:var(--muted);font-size:14px}
 
     /* contact */
-    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:12px}
     input,textarea{font-family:inherit;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;width:100%}
-    button[type="submit"]{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021214;border:0;padding:10px 16px;border-radius:10px;font-weight:700}
+    button[type="submit"]{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#05121a;border:0;padding:10px 16px;border-radius:10px;font-weight:700}
     .small{font-size:13px;color:var(--muted)}
-    .foot{margin-top:36px;border-top:1px solid rgba(255,255,255,0.03);padding-top:18px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+    .footer{margin-top:34px;border-top:1px solid rgba(255,255,255,0.03);padding-top:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px}
 
     /* responsive */
     @media (max-width:1050px){
       .hero{grid-template-columns:1fr}
-      .hero-right{order: -1}
-      .portrait{width:260px;height:260px}
-      .blog-grid{grid-template-columns:1fr 1fr}
+      .portrait-frame{width:260px;height:340px}
       .contact-grid{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr 1fr}
     }
     @media (max-width:640px){
-      .portrait{width:200px;height:200px}
+      .portrait-frame{width:200px;height:260px}
       h1{font-size:26px}
-      .hero-left{padding:0}
+      .grid-3{grid-template-columns:1fr}
     }
 
-    /* small animation */
-    .fade-up{opacity:0;transform:translateY(12px);animation:up .6s ease forwards}
-    @keyframes up{to{opacity:1;transform:none}}
-
-    /* visually hidden for accessibility */
+    /* subtle animation */
+    .fade-up{opacity:0;transform:translateY(10px);animation:enter .6s ease forwards}
+    @keyframes enter{to{opacity:1;transform:none}}
     .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="page">
     <header>
-      <div class="brand" role="banner">
+      <div class="logo" role="banner">
         <img src="/assets/logo.png" alt="Both Innovations logo" onerror="this.style.display='none'">
         <div>
-          <div class="title">Arun</div>
-          <div class="small">CEO &amp; Founder — Both Innovations</div>
+          <div class="brand-name">Both Innovations</div>
+          <div class="small">Arun — CEO &amp; Founder</div>
         </div>
       </div>
 
@@ -189,52 +174,54 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-left">
         <span class="kicker fade-up" style="animation-delay:.05s">Founder • Product • AI</span>
-
         <h1 id="hero-title" class="fade-up" style="animation-delay:.12s">Arun — CEO &amp; Founder, Both Innovations</h1>
-
-        <p class="lead fade-up" style="animation-delay:.18s">
-          I build practical AI and workforce products that reduce busywork and create fair economic opportunity.
-          Currently shipping TruMate AI (context-aware assistant) and KaamLink (verified workforce marketplace).
+        <p class="subtitle fade-up" style="animation-delay:.18s">
+          Building practical, privacy-first AI and verified workforce platforms that reduce busywork and create fair economic opportunity. Leading TruMate AI and KaamLink.
         </p>
 
-        <div class="hero-ctas fade-up" style="animation-delay:.22s">
+        <div class="actions fade-up" style="animation-delay:.22s">
           <a class="btn btn-primary" href="#contact">Work with me</a>
-          <a class="btn btn-ghost" href="/assets/Arun_Resume.pdf" download>Download Resume</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-outline" href="/assets/Arun_Resume.pdf" download>Download Resume</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
 
-        <div class="meta fade-up" style="animation-delay:.26s">Phone: <a class="small" href="tel:+919205645691">+91 92056 45691</a> · Email: <a class="small" href="mailto:bothinnovations@gmail.com">bothinnovations@gmail.com</a></div>
+        <div class="contact-line fade-up" style="animation-delay:.26s">
+          Email: <a href="mailto:bothinnovations@gmail.com" class="small">bothinnovations@gmail.com</a> · Phone: <a href="tel:+919205645691" class="small">+91 92056 45691</a>
+        </div>
       </div>
 
       <aside class="hero-right fade-up" style="animation-delay:.3s" aria-hidden="false">
-        <div class="portrait-wrap" aria-hidden="false">
-          <div class="portrait" role="img" aria-label="Arun — Founder portrait">
-            <img src="/assets/photo.jpg" alt="Arun — Founder portrait" onerror="this.style.display='none'">
+        <div class="portrait-frame" role="img" aria-label="Arun portrait">
+          <div style="position:relative;width:100%;height:100%" class="portrait-overlay">
+            <img src="/assets/photo.jpg" alt="Arun — Founder portrait" class="portrait" onerror="this.style.display='none'">
+            <div class="portrait-badge">CEO &amp; Founder</div>
           </div>
         </div>
 
-        <div class="portrait-caption">Arun</div>
-        <div class="portrait-sub small">Founder &amp; CEO — Both Innovations</div>
+        <div class="portrait-name">Arun</div>
+        <div class="portrait-meta small">Founder &amp; CEO — Both Innovations</div>
         <div class="small" style="margin-top:6px">Udyam Registered · Google Business Verified</div>
       </aside>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section">
-      <h2 class="section-title">About</h2>
-      <div class="card">
+      <div class="sec-title">
+        <h2>About</h2>
+      </div>
+      <div class="card" style="margin-top:12px">
         <p class="small" style="margin:0 0 12px;color:var(--muted)">
-          I’m Arun — product-focused founder building human-first AI and workforce tools. I focus on practical, privacy-aware products that teams actually use.
+          I'm Arun — a product-minded founder who builds tools that help people do real work better. My focus: practicality, safety, and measurable impact.
         </p>
 
         <div class="grid-2" style="margin-top:12px">
           <div>
-            <h3 style="margin:0 0 8px">What I build</h3>
-            <p class="small" style="margin:0">AI companions, workflow automation, and verified workforce systems that reduce coordination overhead and increase dignity.</p>
+            <strong>Approach</strong>
+            <p class="small" style="margin:8px 0 0">Ship small experiments, measure user outcomes, iterate. Privacy-first by design.</p>
           </div>
           <div>
-            <h3 style="margin:0 0 8px">How I work</h3>
-            <p class="small" style="margin:0">Ship small experiments, measure impact, iterate quickly, and keep user privacy central to design.</p>
+            <strong>Core focus</strong>
+            <p class="small" style="margin:8px 0 0">AI companions, workflow automation & verified workforce experiences.</p>
           </div>
         </div>
       </div>
@@ -242,18 +229,20 @@
 
     <!-- PRODUCTS -->
     <section id="products" class="section">
-      <h2 class="section-title">Products</h2>
-      <div class="grid-2" style="margin-top:12px">
+      <div class="sec-title">
+        <h2>Products</h2>
+      </div>
+      <div class="grid-2">
         <div class="card">
           <div class="product">
-            <div class="icon">T</div>
+            <div class="mark">T</div>
             <div>
               <strong>TruMate AI</strong>
-              <p class="small" style="margin:6px 0 0">Context-aware companion that summarizes conversations, nudges for follow-ups, and helps reduce inbox/meeting overhead.</p>
+              <p class="small" style="margin:8px 0 0">Context-aware assistant: summaries, nudges, and privacy controls to help teams manage communication overload.</p>
               <ul class="small" style="margin-top:8px;color:var(--muted)">
-                <li>Summaries for meetings & chats</li>
-                <li>Contextual auto-replies and follow-ups</li>
-                <li>Privacy-first & enterprise controls</li>
+                <li>Meeting & chat summaries</li>
+                <li>Smart auto-replies & follow-ups</li>
+                <li>Enterprise privacy controls</li>
               </ul>
             </div>
           </div>
@@ -261,14 +250,14 @@
 
         <div class="card">
           <div class="product">
-            <div class="icon">K</div>
+            <div class="mark">K</div>
             <div>
               <strong>KaamLink</strong>
-              <p class="small" style="margin:6px 0 0">Verified workforce marketplace — escrow payouts, verification, and welfare support for on-field skilled workers.</p>
+              <p class="small" style="margin:8px 0 0">Verified workforce marketplace: escrow payments, verification, and welfare support for skilled field workers.</p>
               <ul class="small" style="margin-top:8px;color:var(--muted)">
-                <li>Verified profiles & endorsements</li>
+                <li>Profile verification & endorsements</li>
                 <li>Escrow-backed payouts</li>
-                <li>Autonomous matching</li>
+                <li>Quick autonomous matching</li>
               </ul>
             </div>
           </div>
@@ -278,72 +267,78 @@
 
     <!-- BLOG -->
     <section id="blog" class="section">
-      <h2 class="section-title">Blog</h2>
-      <p class="small" style="margin-top:8px">Short takes on product, AI, and building for impact.</p>
-      <div class="blog-grid">
+      <div class="sec-title">
+        <h2>Blog</h2>
+      </div>
+
+      <div class="grid-3" style="margin-top:12px">
         <article class="post">
-          <div class="post-meta">Oct 12, 2025 · Product</div>
-          <h3><a href="#post1">Designing AI people trust</a></h3>
-          <p class="small">Small habits > shiny features. Lessons from designing TruMate pilots.</p>
+          <div class="meta">Oct 12, 2025 · Product</div>
+          <h3><a href="#post1">Designing AI People Trust</a></h3>
+          <p>Why small, predictable behavior changes beat shiny features — lessons from early TruMate pilots.</p>
         </article>
 
         <article class="post">
-          <div class="post-meta">Sep 02, 2025 · Operations</div>
-          <h3><a href="#post2">KaamLink: verification & dignity</a></h3>
-          <p class="small">How verification and escrow protect workers and customers alike.</p>
+          <div class="meta">Sep 02, 2025 · Operations</div>
+          <h3><a href="#post2">KaamLink: Verification & Dignity</a></h3>
+          <p>How verification, escrow, and welfare policies protect workers and build customer trust.</p>
         </article>
 
         <article class="post">
-          <div class="post-meta">Jul 28, 2025 · Founders</div>
-          <h3><a href="#post3">MVP checklist — what actually works</a></h3>
-          <p class="small">A practical checklist I use to ship fast and learn faster.</p>
+          <div class="meta">Jul 28, 2025 · Founders</div>
+          <h3><a href="#post3">MVP Checklist That Actually Works</a></h3>
+          <p>A practical checklist for founders who want to learn quickly and ship responsibly.</p>
         </article>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <h2 class="section-title">Contact</h2>
-      <div class="card">
+      <div class="sec-title">
+        <h2>Contact</h2>
+      </div>
+
+      <div class="card" style="margin-top:12px">
         <div class="contact-grid">
           <div>
-            <p class="small">Open to partnerships, pilots, and conversations. Drop a note below or email directly.</p>
+            <p class="small" style="margin:0 0 12px">Open to partnerships, pilots, and speaking invites. Use the form or email directly.</p>
 
-            <form id="contactForm" action="https://formsubmit.co/bothinnovations@gmail.com" method="POST" onsubmit="return submitContact(event)" novalidate style="margin-top:12px">
-              <input type="text" name="_honey" class="visually-hidden" autocomplete="off" />
+            <!-- FormSubmit as serverless mail; fallback to mailto handled in JS -->
+            <form id="contactForm" action="https://formsubmit.co/bothinnovations@gmail.com" method="POST" onsubmit="return handleContact(event)" novalidate>
+              <input type="text" name="_honey" class="visually-hidden" autocomplete="off"/>
               <input type="hidden" name="_subject" value="Portfolio contact — Arun" />
               <input type="hidden" name="_captcha" value="false" />
 
-              <label class="small" for="name">Your name</label>
-              <input id="name" name="name" type="text" required placeholder="Your name">
+              <label class="small" for="cf-name">Your name</label>
+              <input id="cf-name" name="name" type="text" required placeholder="Your name" />
 
-              <label class="small" for="email" style="margin-top:10px;display:block">Email (optional)</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com">
+              <label class="small" for="cf-email" style="margin-top:10px;display:block">Email (optional)</label>
+              <input id="cf-email" name="email" type="email" placeholder="you@example.com" />
 
-              <label class="small" for="message" style="margin-top:10px;display:block">Message</label>
-              <textarea id="message" name="message" required placeholder="Short message" style="height:110px"></textarea>
+              <label class="small" for="cf-message" style="margin-top:10px;display:block">Message</label>
+              <textarea id="cf-message" name="message" required placeholder="Short message" style="height:110px"></textarea>
 
-              <div style="display:flex;gap:8px;margin-top:10px">
+              <div style="display:flex;gap:10px;margin-top:12px">
                 <button type="submit">Send message</button>
-                <a class="btn btn-ghost" href="mailto:bothinnovations@gmail.com?subject=Contact%20from%20portfolio">Or email directly</a>
+                <a class="btn btn-outline" href="mailto:bothinnovations@gmail.com?subject=Contact%20from%20portfolio">Or email directly</a>
               </div>
 
-              <div id="formNote" class="small" style="margin-top:8px;color:var(--muted)"></div>
+              <div id="cf-note" class="small" style="margin-top:10px;color:var(--muted)"></div>
             </form>
           </div>
 
           <aside style="padding:6px">
             <div style="margin-bottom:12px">
-              <strong>Quick contact</strong>
+              <strong>Contact details</strong>
               <div class="small" style="margin-top:6px">Email: <a href="mailto:bothinnovations@gmail.com">bothinnovations@gmail.com</a></div>
               <div class="small" style="margin-top:6px">Phone: <a href="tel:+919205645691">+91 92056 45691</a></div>
             </div>
 
             <div>
-              <strong>Find me</strong>
+              <strong>Connect</strong>
               <div style="margin-top:8px">
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="small">LinkedIn</a><br>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="small">Instagram</a>
+                <a class="small" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a><br/>
+                <a class="small" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
               </div>
             </div>
           </aside>
@@ -351,59 +346,60 @@
       </div>
     </section>
 
-    <div class="foot">
+    <div class="footer">
       <div>© <strong>Arun</strong> — CEO &amp; Founder, Both Innovations</div>
-      <div class="small">Built with focus • <a href="/assets/Arun_Resume.pdf" download>Resume</a></div>
+      <div class="small">Built with focus • <a class="small" href="/assets/Arun_Resume.pdf" download>Resume</a></div>
     </div>
   </div>
 
   <script>
-    // contact: try FormSubmit via fetch; fallback to mailto
-    async function submitContact(e){
+    // Try FormSubmit via fetch (CORS-friendly). If it fails (CORS or network), fallback to mailto.
+    async function handleContact(e){
       e.preventDefault();
       const form = e.target;
-      const note = document.getElementById('formNote');
+      const note = document.getElementById('cf-note');
       note.textContent = '';
-      const name = (form.querySelector('#name') || {}).value?.trim();
-      const msg = (form.querySelector('#message') || {}).value?.trim();
-      const email = (form.querySelector('#email') || {}).value?.trim();
+      const name = (form.querySelector('#cf-name') || {}).value?.trim();
+      const message = (form.querySelector('#cf-message') || {}).value?.trim();
+      const email = (form.querySelector('#cf-email') || {}).value?.trim();
 
-      if(!name || !msg){
+      if(!name || !message){
         note.textContent = 'Please enter your name and a message.';
         return false;
       }
 
-      const btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
 
       const action = form.getAttribute('action');
       const data = new FormData(form);
 
       try {
-        const res = await fetch(action, { method: 'POST', body: data, mode: 'cors' });
-        if (res.ok || res.type === 'opaque') {
+        const response = await fetch(action, { method: 'POST', body: data, mode: 'cors' });
+        if (response.ok || response.type === 'opaque') {
           note.textContent = 'Thanks — message sent. I will reply soon.';
           form.reset();
         } else {
-          throw new Error('non-ok response');
+          throw new Error('Non-OK response');
         }
       } catch (err) {
+        // fallback to mailto
         const subject = encodeURIComponent('Portfolio contact — ' + name);
-        let body = msg + '\n\nFrom: ' + name;
+        let body = message + '\n\nFrom: ' + name;
         if(email) body += '\nEmail: ' + email;
         window.location.href = `mailto:bothinnovations@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
       } finally {
-        btn.disabled = false;
-        btn.textContent = 'Send message';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
       }
       return false;
     }
 
-    // small staggered fade
+    // small entrance animation timing
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.fade-up').forEach((el,i) => {
-        el.style.animationDelay = (0.05 + i * 0.04) + 's';
+        el.style.animationDelay = (0.05 + i*0.04) + 's';
       });
     });
   </script>

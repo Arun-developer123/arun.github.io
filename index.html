@@ -55,7 +55,6 @@
   }
   </script>
 
-  <!-- Minimal, production-quality styles (single file) -->
   <style>
     :root{
       --bg:#071022;
@@ -65,7 +64,7 @@
       --accent:#00b894;
       --accent-2:#6c5ce7;
       --glass: rgba(255,255,255,0.03);
-      --maxw:1100px;
+      --maxw:1200px;
       --radius:12px;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color-scheme: dark;
@@ -82,23 +81,23 @@
       font-size:16px;
     }
     a{color:inherit}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:40px 20px}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:36px 20px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
     .brand{display:flex;align-items:center;gap:12px}
     .brand img{width:56px;height:56px;object-fit:contain;border-radius:10px;background:var(--glass);padding:6px}
     .brand .title{font-weight:700;font-size:18px}
     nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600;font-size:14px}
-    /* HERO */
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center;margin-top:8px}
-    .hero .content h1{font-size:30px;margin:0 0 10px}
-    .hero .content p.lead{color:var(--muted);margin:0 0 18px;font-size:16px;max-width:54ch}
-    .ctas{display:flex;gap:10px;align-items:center}
+    /* HERO with bigger photo */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start;margin-top:8px}
+    .hero .content h1{font-size:34px;margin:0 0 10px}
+    .hero .content p.lead{color:var(--muted);margin:0 0 18px;font-size:17px;max-width:60ch}
+    .ctas{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700;text-decoration:none}
     .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021214}
     .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:var(--radius);padding:18px;box-shadow:0 8px 40px rgba(2,6,23,0.6)}
-    .photo{width:100%;border-radius:10px;overflow:hidden}
-    .photo img{width:100%;height:auto;display:block;object-fit:cover}
+    .hero-photo{width:100%;border-radius:12px;overflow:hidden;display:block;background:linear-gradient(180deg,#051018,#0a1730);padding:12px}
+    .hero-photo img{width:100%;height:520px;object-fit:cover;border-radius:10px;display:block}
     .meta{margin-top:12px;color:var(--muted);font-size:13px}
     /* ABOUT / SKILLS / PRODUCTS */
     .section{margin-top:36px}
@@ -110,31 +109,42 @@
     .checks li{margin:8px 0}
     .product{display:flex;gap:12px;align-items:flex-start}
     .product .icon{width:56px;height:56px;border-radius:10px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:800}
+    /* BLOG */
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
+    .post-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:10px;padding:14px;border:1px solid rgba(255,255,255,0.02)}
+    .post-card h3{margin:0 0 8px;font-size:18px}
+    .post-meta{font-size:13px;color:var(--muted);margin-bottom:10px}
+    .excerpt{color:var(--muted);font-size:14px}
     /* CONTACT */
     .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:12px}
     input,textarea{font-family:inherit;background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;width:100%}
     button[type="submit"]{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021214;border:0;padding:10px 14px;border-radius:8px;font-weight:700}
     .foot{margin-top:36px;border-top:1px solid rgba(255,255,255,0.03);padding-top:18px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
     /* Responsive */
-    @media (max-width:980px){
+    @media (max-width:1100px){
       .hero{grid-template-columns:1fr}
+      .hero-photo img{height:420px}
       .contact-grid{grid-template-columns:1fr}
+      .blog-grid{grid-template-columns:1fr 1fr}
       .grid-3{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
     }
-    /* small animation */
+    @media (max-width:640px){
+      .hero-photo img{height:320px}
+      .blog-grid{grid-template-columns:1fr}
+    }
+    /* animation */
     .fade-up{opacity:0;transform:translateY(12px);animation:up .6s ease forwards}
     @keyframes up{to{opacity:1;transform:none}}
-    /* accessible hidden */
     .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
   </style>
 </head>
 <body>
   <!--
     Production-ready personal portfolio index.html for Arun (CEO & Founder, Both Innovations)
-    - Place images in /assets/: photo.jpg (portrait), logo.png (company logo)
+    - Place images in /assets/: photo.jpg (large portrait), logo.png (company logo)
     - Resume file (optional): /assets/Arun_Resume.pdf
-    - Contact is wired to FormSubmit (no backend). Replace with your server if needed.
+    - Contact uses FormSubmit (no backend). For enterprise use, replace action with your API.
   -->
   <div class="wrap">
     <header>
@@ -149,7 +159,7 @@
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#products">Products</a>
-        <a href="#press">Achievements</a>
+        <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -160,7 +170,7 @@
         <h1 id="hero-title" class="fade-up">Arun — CEO &amp; Founder, Both Innovations</h1>
         <p class="lead fade-up">
           I build practical AI products and workforce platforms that reduce busywork and create fair economic opportunity.
-          Currently leading Both Innovations — shipping TruMate AI (context-aware assistant) and KaamLink (verified workforce marketplace).
+          Leading Both Innovations — shipping TruMate AI (context-aware assistant) and KaamLink (verified workforce marketplace).
         </p>
 
         <div class="ctas fade-up" style="animation-delay:.12s">
@@ -175,12 +185,14 @@
       </div>
 
       <aside class="card fade-up" style="animation-delay:.14s" aria-hidden="false">
-        <div class="photo">
+        <!-- BIG HERO PHOTO -->
+        <div class="hero-photo" role="img" aria-label="Arun — Founder portrait">
           <img src="/assets/photo.jpg" alt="Arun — Founder portrait" onerror="this.style.display='none'"/>
         </div>
+
         <div style="margin-top:12px">
           <div style="font-weight:800">Arun</div>
-          <div class="small">CEO &amp; Founder — Both Innovations</div>
+          <div class="small">Founder &amp; CEO — Both Innovations</div>
           <div class="small" style="margin-top:8px">Udyam Registered · Google Business Verified</div>
         </div>
       </aside>
@@ -256,11 +268,40 @@
       </div>
     </section>
 
+    <!-- BLOG -->
+    <section id="blog" class="section">
+      <h2 class="section-title">Blog</h2>
+      <p class="small" style="margin-top:8px">Latest thoughts on product, AI, and building for impact. Full articles link to dedicated pages (or let me know and I’ll convert these to separate pages).</p>
+
+      <div class="blog-grid" style="margin-top:12px">
+        <article class="post-card">
+          <div class="post-meta">Oct 12, 2025 • Product</div>
+          <h3><a href="#post1">Designing AI that people actually adopt</a></h3>
+          <p class="excerpt">Small, predictable behaviors beat flashy features. Here’s how we built TruMate to be helpful without being creepy — design lessons from early pilots.</p>
+          <div style="margin-top:10px"><a class="btn btn-outline" href="#post1">Read</a></div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-meta">Sep 02, 2025 • Operations</div>
+          <h3><a href="#post2">Why worker verification matters — building KaamLink</a></h3>
+          <p class="excerpt">Verification isn’t just trust — it’s dignity. How we structured on-ground checks, escrow, and welfare flows to protect workers and customers.</p>
+          <div style="margin-top:10px"><a class="btn btn-outline" href="#post2">Read</a></div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-meta">Jul 28, 2025 • Career</div>
+          <h3><a href="#post3">From idea to pilot: shipping an MVP in 8 weeks</a></h3>
+          <p class="excerpt">A practical roadmap for founders: focus, constraint, and relentless user feedback. My checklist for MVPs that actually learn.</p>
+          <div style="margin-top:10px"><a class="btn btn-outline" href="#post3">Read</a></div>
+        </article>
+      </div>
+    </section>
+
     <!-- ACHIEVEMENTS / PRESS -->
     <section id="press" class="section">
       <h2 class="section-title">Achievements</h2>
       <div class="card" style="padding:18px">
-        <ul class="small">
+        <ul class="small" style="margin:0">
           <li>Udyam Registered business — Both Innovations</li>
           <li>Google Business Profile verified</li>
           <li>Built & launched initial pilots for TruMate AI and KaamLink</li>
@@ -282,6 +323,7 @@
               <input type="text" name="_honey" class="visually-hidden" autocomplete="off" />
               <input type="hidden" name="_subject" value="Portfolio contact — Arun" />
               <input type="hidden" name="_captcha" value="false" />
+
               <label class="small" for="fullname">Your name</label>
               <input id="fullname" name="name" type="text" required placeholder="Your name" />
 
@@ -325,7 +367,7 @@
     </div>
   </div>
 
-  <!-- Client-side JS for form UX: tries FormSubmit via fetch; falls back to mailto if blocked -->
+  <!-- Client-side JS: attempts FormSubmit via fetch; falls back to mailto -->
   <script>
     async function submitContact(e){
       e.preventDefault();
@@ -341,15 +383,16 @@
         return false;
       }
 
-      const sendBtn = form.querySelector('button[type="submit"]');
-      sendBtn.disabled = true;
-      sendBtn.textContent = 'Sending…';
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
 
       const action = form.getAttribute('action');
       const data = new FormData(form);
 
       try {
         const res = await fetch(action, { method: 'POST', body: data, mode: 'cors' });
+        // Many form services redirect; check for OK or opaque
         if (res.ok || res.type === 'opaque') {
           note.textContent = 'Thanks — message sent. I will reply soon.';
           form.reset();
@@ -363,8 +406,8 @@
         if(email) body += '\nEmail: ' + email;
         window.location.href = `mailto:bothinnovations@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
       } finally {
-        sendBtn.disabled = false;
-        sendBtn.textContent = 'Send message';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
       }
       return false;
     }
